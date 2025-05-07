@@ -1,5 +1,5 @@
 import logging
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 import os
 import json
@@ -80,16 +80,18 @@ async def upload_document(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/query")
-async def query_content(query: str = Form(...)):
+async def query_content(request: Request):
     try:
-        # Get all processed documents
-        processed_files = storage_service.list_processed()
-        all_processed = [storage_service.get_processed(filename) for filename in processed_files]
-        
-        # Search using OpenAI
-        results = openai_service.search_content(query, all_processed)
-        
-        return results
+        data = await request.json()
+        prompt = data.get("query", "")
+        # Directly call OpenAI
+        response = openai_service.client.chat.completions.create(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1000,
+        )
+        reply = response.choices[0].message.content
+        return {"reply": reply}
     except Exception as e:
         logging.exception("Error in /query endpoint")
         raise HTTPException(status_code=500, detail=str(e))
