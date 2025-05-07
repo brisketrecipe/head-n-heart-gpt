@@ -74,3 +74,47 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2025-05-07 12:14:25,679 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-07 12:15:27,703 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-07 12:15:35,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:16:05,822 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:28:48,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:28:55,873 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:31:53,530 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-07 12:31:53,533 [ERROR] Error in /query endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 92, in query_content
+    response = openai_service.search_content(query, processed_docs)
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 93, in search_content
+    search_response = self.client.chat.completions.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
+    return self._post(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-07 12:31:59,369 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-07 12:31:59,371 [ERROR] Error in /query endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 92, in query_content
+    response = openai_service.search_content(query, processed_docs)
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 93, in search_content
+    search_response = self.client.chat.completions.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
+    return self._post(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-07 12:35:05,193 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:35:10,560 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:35:26,396 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:35:31,599 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 12:37:17,507 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

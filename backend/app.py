@@ -83,15 +83,14 @@ async def upload_document(file: UploadFile = File(...)):
 async def query_content(request: Request):
     try:
         data = await request.json()
-        prompt = data.get("query", "")
-        # Directly call OpenAI
-        response = openai_service.client.chat.completions.create(
-            model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=1000,
-        )
-        reply = response.choices[0].message.content
-        return {"reply": reply}
+        query = data.get("query", "")
+        # Get all processed documents from storage
+        processed_docs = []
+        for filename in storage_service.list_processed():
+            processed_docs.append(storage_service.get_processed(filename))
+        # Pass to OpenAI service to search and generate response
+        response = openai_service.search_content(query, processed_docs)
+        return response
     except Exception as e:
         logging.exception("Error in /query endpoint")
         raise HTTPException(status_code=500, detail=str(e))

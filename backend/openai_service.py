@@ -71,12 +71,12 @@ class OpenAIService:
                 model="gpt-4",
                 messages=[
                     {"role": "system", "content": """You are a document tagging expert. 
-                    Tag this document based on these categories:
-                    - Action: How the content is used (e.g., \"Lecture\", \"Assignment\", \"Reading\")
-                    - Relationships: How content connects with people/other content
-                    - Discipline: Subject matter area
-                    - Purpose: Educational goal
-                    Return JSON with these categories as keys, each with 1-3 appropriate tags."""},
+                    IMPORTANT: Tag this document STRICTLY based on ONLY these four categories:
+                    - Action: How the content is used (MUST be one of: 'Lecture', 'Assignment', 'Reading', 'Exercise', 'Quiz', 'Lab', 'Project', 'Discussion', 'Demonstration')
+                    - Relationships: How content connects (MUST be one of: 'Student-Led', 'Group Work', 'Prerequisite', 'Follow-up', 'Reference', 'Supplemental', 'Core', 'Optional', 'Collaborative')
+                    - Discipline: Subject matter area (MUST be one of: 'Mathematics', 'Biology', 'Chemistry', 'Physics', 'Computer Science', 'Literature', 'History', 'Psychology', 'Economics', 'Art', 'Music')
+                    - Purpose: Educational goal (MUST be one of: 'Conceptual Understanding', 'Skill Building', 'Assessment', 'Critical Thinking', 'Application', 'Review', 'Introduction', 'Analysis', 'Synthesis')
+                    \nYou MUST use ONLY the exact tags listed above. Do not create new tags.\nReturn JSON with these categories as keys, each with 1-3 appropriate tags from the provided options."""},
                     {"role": "user", "content": f"Document to tag: {content[:5000]}... (truncated)"}
                 ],
                 response_format={"type": "json_object"}
@@ -85,44 +85,35 @@ class OpenAIService:
             return chunks, tags
     
     def search_content(self, query, all_processed_docs):
-        """Search across all processed content using GPT"""
-        # Prepare a summary of available content for GPT
-        content_summary = self._prepare_content_summary(all_processed_docs)
-        
-        # Ask GPT to identify which documents/chunks are most relevant
-        search_response = self.client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": """You are a document retrieval system.
-                Your task is to identify which documents and chunks are most relevant to 
-                the user's query based on the summaries provided. Return the IDs of the 
-                top 5-10 most relevant chunks."""},
-                {"role": "user", "content": f"Query: {query}\n\nAvailable Content: {content_summary}"}
-            ],
-            response_format={"type": "json_object"}
+        """Send all chunked content as context to GPT for answering the query."""
+        # Flatten all chunks into a single context string
+        context_chunks = []
+        for doc in all_processed_docs:
+            for chunk in doc.get("chunks", []):
+                context_chunks.append(
+                    f"Source: {doc.get('filename', '')}\nTags: {json.dumps(doc.get('tags', {}))}\nContent: {chunk.get('text', '')}\n"
+                )
+        context = "\n---\n".join(context_chunks)
+
+        # Compose the prompt
+        prompt = (
+            f"You are an educational content assistant. "
+            f"Use the following content to answer the user's question. "
+            f"Reference specific sources if possible.\n\n"
+            f"User question: {query}\n\n"
+            f"Available content:\n{context}"
         )
-        
-        # Parse relevant chunks
-        relevant_chunks = self._parse_search_results(search_response.choices[0].message.content)
-        
-        # Fetch the actual content of those chunks
-        retrieved_chunks = self._fetch_chunks(relevant_chunks, all_processed_docs)
-        
-        # Generate a response based on the retrieved chunks
+
         response = self.client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[
-                {"role": "system", "content": """You are an educational content assistant.
-                Based on the retrieved content chunks, provide a helpful response to the 
-                user's query about educational materials."""},
-                {"role": "user", "content": f"Query: {query}\n\nRetrieved content: {retrieved_chunks}"}
+                {"role": "system", "content": "You are an educational content assistant."},
+                {"role": "user", "content": prompt}
             ]
         )
-        
         return {
             "query": query,
-            "suggestions": response.choices[0].message.content,
-            "relevant_chunks": retrieved_chunks
+            "reply": response.choices[0].message.content
         }
     
     def _parse_chunks(self, response_text):
@@ -149,28 +140,4 @@ class OpenAIService:
                     "summary": chunk.get("summary", ""),
                     "context": chunk.get("context", "")
                 })
-        return json.dumps(summary)
-    
-    def _parse_search_results(self, response_text):
-        """Parse GPT's search results"""
-        try:
-            return json.loads(response_text).get("relevant_chunks", [])
-        except:
-            return []
-    
-    def _fetch_chunks(self, chunk_ids, all_processed_docs):
-        """Fetch the actual content of the relevant chunks"""
-        chunks = []
-        for doc in all_processed_docs:
-            for chunk in doc.get("chunks", []):
-                chunk_id = f"{doc['filename']}_{chunk.get('id', '')}"
-                if chunk_id in chunk_ids:
-                    chunks.append({
-                        "id": chunk_id,
-                        "source": doc["filename"],
-                        "text": chunk.get("text", ""),
-                        "summary": chunk.get("summary", ""),
-                        "context": chunk.get("context", ""),
-                        "tags": doc.get("tags", {})
-                    })
-        return chunks 
+        return json.dumps(summary) 
