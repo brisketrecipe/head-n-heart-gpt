@@ -78,10 +78,27 @@ const StatusMessage = styled.div`
   color: ${props => props.success ? '#155724' : '#721c24'};
 `;
 
+const ProgressBar = styled.div`
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  margin-top: 1rem;
+  height: 16px;
+  overflow: hidden;
+`;
+const ProgressFill = styled.div`
+  height: 100%;
+  background: #2c3e50;
+  width: ${props => props.percent}%;
+  transition: width 0.2s;
+`;
+
 function DocumentUpload() {
   const [files, setFiles] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [uploadProgress, setUploadProgress] = useState({});
+  const [overallProgress, setOverallProgress] = useState(0);
 
   const handleFileSelect = (event) => {
     const selectedFiles = Array.from(event.target.files);
@@ -107,9 +124,12 @@ function DocumentUpload() {
 
     setUploading(true);
     setStatus(null);
+    setUploadProgress({});
+    setOverallProgress(0);
 
     try {
-      for (const file of files) {
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
         const formData = new FormData();
         formData.append('file', file);
 
@@ -117,19 +137,26 @@ function DocumentUpload() {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
+          onUploadProgress: (progressEvent) => {
+            const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+            setUploadProgress(prev => ({
+              ...prev,
+              [file.name]: percentCompleted
+            }));
+            // Calculate overall progress
+            const totalProgress = files.reduce((acc, f, idx) => {
+              return acc + (uploadProgress[f.name] || (idx < i ? 100 : 0));
+            }, 0);
+            setOverallProgress(Math.round(totalProgress / files.length));
+          }
         });
       }
-
-      setStatus({
-        success: true,
-        message: 'Files uploaded successfully!',
-      });
+      setStatus({ success: true, message: 'Files uploaded successfully!' });
       setFiles([]);
+      setUploadProgress({});
+      setOverallProgress(100);
     } catch (error) {
-      setStatus({
-        success: false,
-        message: 'Error uploading files. Please try again.',
-      });
+      setStatus({ success: false, message: 'Error uploading files. Please try again.' });
     } finally {
       setUploading(false);
     }
@@ -160,16 +187,21 @@ function DocumentUpload() {
             {files.map((file, index) => (
               <FileItem key={index}>
                 <FileName>{file.name}</FileName>
+                <span>
+                  {uploadProgress[file.name] ? `${uploadProgress[file.name]}%` : ''}
+                </span>
                 <button onClick={() => removeFile(index)}>Remove</button>
               </FileItem>
             ))}
           </FileList>
-
+          <ProgressBar>
+            <ProgressFill percent={overallProgress} />
+          </ProgressBar>
           <UploadButton
             onClick={uploadFiles}
             disabled={uploading}
           >
-            {uploading ? 'Uploading...' : 'Upload Files'}
+            {uploading ? `Uploading... (${overallProgress}%)` : 'Upload Files'}
           </UploadButton>
         </>
       )}

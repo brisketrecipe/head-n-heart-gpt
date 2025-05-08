@@ -118,3 +118,157 @@ openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid paramet
 2025-05-07 12:35:26,396 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-07 12:35:31,599 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-07 12:37:17,507 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:37:59,027 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 23:08:05,025 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-07 23:08:05,028 [ERROR] Error in /upload endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 62, in upload_document
+    chunks, tags = openai_service.process_document(extracted_content, filename, filetype=filetype)
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 54, in process_document
+    chunk_response = self.client.chat.completions.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
+    return self._post(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-07 23:09:31,372 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-07 23:09:31,376 [ERROR] Error in /upload endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 62, in upload_document
+    chunks, tags = openai_service.process_document(extracted_content, filename, filetype=filetype)
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 54, in process_document
+    chunk_response = self.client.chat.completions.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
+    return self._post(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-07 23:14:07,321 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 23:14:07,330 [ERROR] Error in /upload endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 67, in upload_document
+    embedding = openai.Embedding.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
+    return getattr(self.__get_proxied__(), attr)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
+    return self.__load__()
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.Embedding, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-05-07 23:18:59,719 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 23:18:59,871 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:00,637 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:01,357 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:02,174 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:02,788 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:03,096 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:03,812 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:19:04,886 [ERROR] Error in /upload endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 75, in upload_document
+    pinecone_service.upsert_chunks(filename, chunk_objs, tags)
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/pinecone_service.py", line 31, in upsert_chunks
+    self.index.upsert(vectors)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 11, in inner_func
+    return func(*args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 141, in upsert
+    return self._upsert_batch(vectors, namespace, _check_type, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 167, in _upsert_batch
+    return self._vector_api.upsert_vectors(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 102, in __call__
+    return self.callable(self, *args, **kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/core/openapi/db_data/api/vector_operations_api.py", line 675, in __upsert_vectors
+    return self.call_with_http_info(**kwargs)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 134, in call_with_http_info
+    return self.api_client.call_api(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 300, in call_api
+    return self.__call_api(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 178, in __call_api
+    raise e
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 166, in __call_api
+    response_data = self.request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 380, in request
+    return self.rest_client.POST(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 146, in POST
+    return self.request(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_urllib3.py", line 260, in request
+    return raise_exceptions_or_return(r)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 49, in raise_exceptions_or_return
+    raise PineconeApiException(http_resp=r)
+pinecone.openapi_support.exceptions.PineconeApiException: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 08 May 2025 04:19:04 GMT', 'Content-Type': 'application/json', 'Content-Length': '150', 'Connection': 'keep-alive', 'x-pinecone-request-latency-ms': '701', 'x-pinecone-request-id': '108280469814778587', 'x-envoy-upstream-service-time': '133', 'server': 'envoy'})
+HTTP response body: {"code":3,"message":"Metadata value must be a string, number, boolean or list of strings, got '{\"Action\":\"Refle...' for field 'tags'","details":[]}
+
+2025-05-07 23:21:24,321 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 23:21:24,821 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:21:25,009 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:21:25,332 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:21:25,845 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:21:26,068 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:21:26,708 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:22:33,383 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:22:33,722 [ERROR] Error in /query endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 119, in query_content
+    response = openai.ChatCompletion.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
+    return getattr(self.__get_proxied__(), attr)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
+    return self.__load__()
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-05-07 23:22:37,539 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:22:37,617 [ERROR] Error in /query endpoint
+Traceback (most recent call last):
+  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 119, in query_content
+    response = openai.ChatCompletion.create(
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
+    return getattr(self.__get_proxied__(), attr)
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
+    return self.__load__()
+  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-05-07 23:24:30,476 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-07 23:24:39,111 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

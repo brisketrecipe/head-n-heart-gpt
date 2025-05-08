@@ -117,9 +117,7 @@ function QueryInterface() {
 
     setLoading(true);
     try {
-      const response = await axios.post('/api/query', {
-        query: query.trim(),
-      });
+      const response = await axios.post('/api/query', { query: query.trim() });
       setResults(response.data);
     } catch (error) {
       console.error('Error querying content:', error);
@@ -145,33 +143,9 @@ function QueryInterface() {
       {results && (
         <ResultsContainer>
           <SuggestionBox>
-            <h2>Suggestions</h2>
-            <p>{results.suggestions}</p>
+            <h2>Response</h2>
+            <p>{results.reply}</p>
           </SuggestionBox>
-
-          <h2>Relevant Content</h2>
-          <ChunkList>
-            {results.relevant_chunks.map((chunk, index) => (
-              <ChunkItem key={index}>
-                <ChunkHeader>
-                  <ChunkSource>{chunk.source}</ChunkSource>
-                  <ConfidenceScore>
-                    Confidence: {Math.round(chunk.confidence * 100)}%
-                  </ConfidenceScore>
-                </ChunkHeader>
-                <ChunkText>{chunk.text}</ChunkText>
-                <TagList>
-                  {Object.entries(chunk.tags).map(([category, tags]) => (
-                    tags.map((tag, tagIndex) => (
-                      <Tag key={`${category}-${tagIndex}`}>
-                        {category}: {tag}
-                      </Tag>
-                    ))
-                  ))}
-                </TagList>
-              </ChunkItem>
-            ))}
-          </ChunkList>
         </ResultsContainer>
       )}
     </QueryContainer>

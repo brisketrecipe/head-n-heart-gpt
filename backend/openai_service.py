@@ -61,25 +61,18 @@ class OpenAIService:
                     Return a JSON object with an array of chunks, where each chunk has:
                     - text: the actual content
                     - summary: a brief description of what the chunk contains
-                    - context: any important context needed to understand the chunk"""},
+                    - context: any important context needed to understand the chunk
+                    Respond ONLY with a valid JSON object."""},
                     {"role": "user", "content": f"Here's the document to process: {content[:10000]}... (truncated)"}
-                ],
-                response_format={"type": "json_object"}
+                ]
             )
             chunks = self._parse_chunks(chunk_response.choices[0].message.content)
             tag_response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": """You are a document tagging expert. 
-                    IMPORTANT: Tag this document STRICTLY based on ONLY these four categories:
-                    - Action: How the content is used (MUST be one of: 'Lecture', 'Assignment', 'Reading', 'Exercise', 'Quiz', 'Lab', 'Project', 'Discussion', 'Demonstration')
-                    - Relationships: How content connects (MUST be one of: 'Student-Led', 'Group Work', 'Prerequisite', 'Follow-up', 'Reference', 'Supplemental', 'Core', 'Optional', 'Collaborative')
-                    - Discipline: Subject matter area (MUST be one of: 'Mathematics', 'Biology', 'Chemistry', 'Physics', 'Computer Science', 'Literature', 'History', 'Psychology', 'Economics', 'Art', 'Music')
-                    - Purpose: Educational goal (MUST be one of: 'Conceptual Understanding', 'Skill Building', 'Assessment', 'Critical Thinking', 'Application', 'Review', 'Introduction', 'Analysis', 'Synthesis')
-                    \nYou MUST use ONLY the exact tags listed above. Do not create new tags.\nReturn JSON with these categories as keys, each with 1-3 appropriate tags from the provided options."""},
-                    {"role": "user", "content": f"Document to tag: {content[:5000]}... (truncated)"}
-                ],
-                response_format={"type": "json_object"}
+                    {"role": "system", "content": """You are a document tagging expert.\nFor each chunk of educational content, decide which of the following four categories the chunk is about:\n- Action\n- Discipline\n- Relationships\n- Purpose\n\nReturn a JSON array of the relevant categories for this chunk. Only include categories that are clearly relevant. Example:\n[\"Action\", \"Purpose\"]\nRespond ONLY with a valid JSON array."""}, 
+                    {"role": "user", "content": f"Document chunk to tag: {content[:5000]}... (truncated)"}
+                ]
             )
             tags = self._parse_tags(tag_response.choices[0].message.content)
             return chunks, tags
