@@ -153,7 +153,7 @@ Our program focuses on four core value categories, each with four specific behav
 
 For the behavioral competency: {query}
 
-Please extract 3-5 relevant sections from the context, provide precise references for each, and suggest how to incorporate them into our entrepreneurship-focused lesson plan. Each suggestion should specifically reinforce the behavioral competency while aligning with WCE's overall philosophy. Conclude with an overall approach for teaching this competency.
+Please extract 8-10 relevant sections from the context, provide precise references for each, and suggest how to incorporate them into our entrepreneurship-focused lesson plan. Each suggestion should specifically reinforce the behavioral competency while aligning with WCE's overall philosophy. Conclude with an overall approach for teaching this competency.
 
 The additional user and assistant prompts are only for reference. Do not use them in your response. Please only use use the context provided. Do not assume the lesson plan the user is asking for, allow them to tell you. 
 
@@ -235,7 +235,17 @@ Context:
                 {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {query}"}
             ]
         )
-        return {"reply": response.choices[0].message.content}
+        response_json = response.choices[0].message.content
+        try:
+            data = json.loads(response_json)
+            formatted = f"### Competency: {data.get('competency', '')}  \n**Category:** {data.get('category', '')}\n\n---\n\n#### Extracts\n"
+            for i, extract in enumerate(data.get('extracts', []), 1):
+                teaching_suggestion = extract.get('teaching_suggestion', '').replace('. ', '.\n   - ')
+                formatted += f"{i}. **Content:**  \n   {extract.get('content', '')}  \n   **Reference:**  \n   {extract.get('reference', '')}  \n   **Teaching Suggestion:**  \n   - {teaching_suggestion}\n\n"
+            formatted += "---\n\n#### Lesson Approach\n\n" + data.get('lesson_approach', '')
+        except Exception:
+            formatted = response_json  # fallback to raw if not JSON
+        return {"reply": formatted}
     except Exception as e:
         logging.exception("Error in /query endpoint")
         raise HTTPException(status_code=500, detail=str(e))

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 const QueryContainer = styled.div`
   display: flex;
@@ -144,7 +145,7 @@ function QueryInterface() {
         <ResultsContainer>
           <SuggestionBox>
             <h2>Response</h2>
-            <p>{results.reply}</p>
+            <ReactMarkdown>{results.reply}</ReactMarkdown>
           </SuggestionBox>
         </ResultsContainer>
       )}
