@@ -102,6 +102,10 @@ async def upload_document(file: UploadFile = File(...)):
 @app.post("/query")
 async def query_content(request: Request):
     try:
+        # Clear the log file
+        with open("app.log", "w") as f:
+            f.write("")
+            
         data = await request.json()
         query = data.get("query", "")
         # Generate embedding for query
@@ -115,12 +119,16 @@ async def query_content(request: Request):
         # Gather context from top chunks
         chunks = [match["metadata"]["chunkText"] for match in matches]
         context = "\n\n".join(chunks)
+        
+        # Log the context and prompt
+        logging.info("=== FULL CONTEXT BEING FED TO GPT ===")
+        logging.info(context)
+        logging.info("=== END CONTEXT ===")
+        
         # Use GPT-4o to answer
-        response = openai_service.client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {"role": "system", "content": "You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). You extract relevant materials from context and format them as structured lesson resources aligned with WCE's core values and behavioral competencies."},
-                    {"role": "user", "content": f"""
+        messages = [
+            {"role": "system", "content": "You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). You extract relevant materials from context and format them as structured lesson resources aligned with WCE's core values and behavioral competencies."},
+            {"role": "user", "content": f"""
 I need you to analyze the provided context and extract the most relevant material for developing a lesson plan for the Wolff Center for Entrepreneurship (WCE) at the University of Houston's C. T. Bauer College of Business.
 
 The WCE is guided by a philosophy centered on empowering students to understand their values, articulate their dreams, and achieve tangible outcomes. The program emphasizes both academic rigor and real-world application, preparing students to assume leadership roles in business by teaching them how to develop and implement their own ventures. WCE fosters personal and professional growth through mentorship, experiential learning, and a commitment to integrity and innovation.
@@ -155,36 +163,37 @@ For the behavioral competency: {query}
 
 Please extract 8-10 relevant sections from the context, provide precise references for each, and suggest how to incorporate them into our entrepreneurship-focused lesson plan. Each suggestion should specifically reinforce the behavioral competency while aligning with WCE's overall philosophy. Conclude with an overall approach for teaching this competency.
 
+In the reference output, please explicitly mention the filename from the content. It is listed in the metadata at the top of each file as "filename".
+
 The additional user and assistant prompts are only for reference. Do not use them in your response. Please only use use the context provided. Do not assume the lesson plan the user is asking for, allow them to tell you. 
 
 Context:
 {context}
 """},
-    {"role": "user", "content": "We want to develop a lesson plan on 'Fearless Presenter' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value."},
-
-    {"role": "assistant", "content": """
+            {"role": "user", "content": "We want to develop a lesson plan on 'Fearless Presenter' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value."},
+            {"role": "assistant", "content": """
 {
   "competency": "Fearless Presenter",
   "category": "ACTION",
   "extracts": [
     {
       "content": "Effective communication is not merely about slide design or voice projection—it's about conveying conviction in your venture's value proposition. Research indicates that investors make preliminary funding decisions within the first 3 minutes of a pitch, responding primarily to the founder's passionate belief in their solution.",
-      "reference": "Entrepreneurial Communication Guide, Chapter 4, 'Pitch Psychology,' Pages 78-82",
+      "reference": "Entrepreneurial_Communication_Guide.pdf, Chapter 4, 'Pitch Psychology,' Pages 78-82",
       "teaching_suggestion": "Structure a progressive pitching exercise where students present the same concept three times with increasing stakes: first to a peer, then to a small group, and finally to a panel of visiting entrepreneurs. Provide specific feedback on how their conviction comes through in each iteration."
     },
     {
       "content": "Fear management techniques distinguish novice from experienced presenters. The entrepreneurial mindset reframes presentation anxiety as excitement, utilizing physiological arousal as fuel rather than allowing it to become an obstacle to effective delivery.",
-      "reference": "Founder Psychology Handbook, Section 5.3, 'Performance Under Pressure'",
+      "reference": "Founder_Psychology_Handbook.pdf, Section 5.3, 'Performance Under Pressure'",
       "teaching_suggestion": "Teach specific pre-presentation routines that embrace nervous energy, including power posing, controlled breathing, and positive visualization. Have students develop personalized 5-minute pre-presentation rituals they can implement before important pitches."
     },
     {
       "content": "Story-driven presentations generate 63% better recall than fact-based approaches. The entrepreneurial narrative arc—establishing the problem, revealing the journey to the solution, and painting the vision of impact—creates both emotional connection and logical understanding.",
-      "reference": "Pitch Deck Development Manual, Chapter 2, 'Narrative Structures for Entrepreneurs'",
+      "reference": "Pitch_Deck_Development_Manual.pdf, Chapter 2, 'Narrative Structures for Entrepreneurs'",
       "teaching_suggestion": "Challenge students to identify their venture's 'origin story' and craft it into a 2-minute opening that establishes both credibility and emotional resonance before any business metrics are shared."
     },
     {
       "content": "Data visualization literacy separates memorable presentations from forgettable ones. Entrepreneurs must transform complex business information into instantly comprehensible visual insights that support rather than overwhelm their core message.",
-      "reference": "Data Communication Guide, Pages 45-51, 'Visual Storytelling for Business Impact'",
+      "reference": "Data_Communication_Guide.pdf, Pages 45-51, 'Visual Storytelling for Business Impact'",
       "teaching_suggestion": "Conduct a workshop where students bring their venture's most complex dataset and develop three different visualization approaches, then test which creates the fastest understanding with audience members."
     }
   ],
@@ -192,10 +201,8 @@ Context:
 }
 
 """},
-
-    {"role": "user", "content": "We want to develop a lesson plan on 'CEO Perspective' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value."},
-
-    {"role": "assistant", "content": """
+            {"role": "user", "content": "We want to develop a lesson plan on 'CEO Perspective' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value."},
+            {"role": "assistant", "content": """
 
 {
   "competency": "CEO Perspective",
@@ -203,27 +210,27 @@ Context:
   "extracts": [
     {
       "content": "The CEO Perspective requires entrepreneurs to simultaneously hold three time horizons: immediate tactical execution, mid-range strategic positioning, and long-term vision fulfillment. Research with successful founders reveals that this cognitive flexibility—switching between operational details and big-picture thinking—correlates strongly with venture longevity.",
-      "reference": "Executive Mindset Manual, Chapter 3, 'Temporal Leadership Dimensions,' Pages 72-79",
+      "reference": "Executive_Mindset_Manual.pdf, Chapter 3, 'Temporal Leadership Dimensions,' Pages 72-79",
       "teaching_suggestion": "Implement a 'three horizons exercise' where students make decisions about the same business challenge from three different timeframes (next week, next year, next decade), then analyze how these perspectives lead to different priorities and actions."
     },
     {
       "content": "CEO Perspective encompasses the ability to analyze stakeholder ecosystems holistically. Novice entrepreneurs often optimize for customer needs alone, while experienced founders balance the interests of customers, team members, investors, partners, and community with sophisticated tradeoff analysis.",
-      "reference": "Stakeholder Management Guide, Section 4.2, 'Multi-constituency Decision Making'",
+      "reference": "Stakeholder_Management_Guide.pdf, Section 4.2, 'Multi-constituency Decision Making'",
       "teaching_suggestion": "Create a stakeholder simulation where student teams navigate a complex business decision with actors representing different stakeholders with competing interests. Debrief by evaluating how effectively they balanced diverse needs while staying true to core venture values."
     },
     {
       "content": "The psychological burden of ultimate accountability distinguishes the CEO role from all others. Research on entrepreneur resilience indicates that those who develop rituals for processing failure, celebrating small wins, and maintaining perspective during crises demonstrate significantly higher leadership effectiveness scores.",
-      "reference": "Founder Psychology Report, Pages 115-127, 'Decision-Making Under Uncertainty'",
+      "reference": "Founder_Psychology_Report.pdf, Pages 115-127, 'Decision-Making Under Uncertainty'",
       "teaching_suggestion": "Establish a regular 'CEO reflection practice' where students document their decision processes, assumptions, and emotional responses to outcomes. Partner with the Psychology department to provide structured feedback on their self-awareness and emotional regulation strategies."
     },
     {
       "content": "Houston's most successful entrepreneurs demonstrate a distinct form of CEO Perspective through their ability to connect industry-specific opportunities with broader economic and social trends. This contextual intelligence—seeing how their venture fits within larger systems—enables more strategic resource allocation and more compelling narrative creation.",
-      "reference": "Houston Entrepreneurship Case Studies, Volume 3, 'Systems Thinking in Practice'",
+      "reference": "Houston_Entrepreneurship_Case_Studies.pdf, Volume 3, 'Systems Thinking in Practice'",
       "teaching_suggestion": "Organize small-group sessions with successful Houston CEOs where students present their analysis of how macro trends impact their specific venture concept, receiving feedback on their contextual intelligence and systems thinking."
     },
     {
       "content": "Financial literacy transforms from a technical skill to a strategic advantage when entrepreneurs develop what veteran CEOs call 'number sense'—the ability to quickly identify which metrics truly drive business health and which are vanity metrics that distract from core value creation.",
-      "reference": "Financial Leadership for Entrepreneurs, Chapter 8, 'From Accounting to Strategy'",
+      "reference": "Financial_Leadership_for_Entrepreneurs.pdf, Chapter 8, 'From Accounting to Strategy'",
       "teaching_suggestion": "Challenge students to identify the 3-5 most critical metrics for their venture and defend why these specific numbers deserve CEO attention. Have them create a one-page 'CEO Dashboard' that would guide their weekly decision-making."
     }
   ],
@@ -231,9 +238,21 @@ Context:
 }
      
 """},
-
-                {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {query}"}
-            ]
+            {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {query}"}
+        ]
+        
+        # Log the complete messages being sent to GPT
+        logging.info("\n=== COMPLETE MESSAGES BEING SENT TO GPT ===")
+        for i, msg in enumerate(messages, 1):
+            logging.info(f"\n--- Message {i} ---")
+            logging.info(f"Role: {msg['role']}")
+            logging.info(f"Content:\n{msg['content']}")
+            logging.info("--- End Message ---")
+        logging.info("\n=== END MESSAGES ===")
+        
+        response = openai_service.client.chat.completions.create(
+            model="gpt-4o",
+            messages=messages
         )
         response_json = response.choices[0].message.content
         try:

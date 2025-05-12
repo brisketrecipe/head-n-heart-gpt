@@ -1,723 +1,216 @@
-2025-05-07 11:41:44,366 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 11:42:39,430 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 11:43:38,883 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 11:49:48,062 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-07 11:49:48,065 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 90, in query_content
-    results = openai_service.search_content(query, all_processed)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 93, in search_content
-    search_response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
-2025-05-07 11:53:51,084 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 85, in query_content
-    data = await request.json()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/starlette/requests.py", line 244, in json
-    self._json = json.loads(body)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2025-05-07 11:56:03,066 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 85, in query_content
-    data = await request.json()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/starlette/requests.py", line 244, in json
-    self._json = json.loads(body)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2025-05-07 11:56:04,387 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 85, in query_content
-    data = await request.json()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/starlette/requests.py", line 244, in json
-    self._json = json.loads(body)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2025-05-07 12:09:47,755 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 85, in query_content
-    data = await request.json()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/starlette/requests.py", line 244, in json
-    self._json = json.loads(body)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2025-05-07 12:14:25,679 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:15:27,703 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:15:35,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:16:05,822 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:28:48,288 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:28:55,873 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:31:53,530 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-07 12:31:53,533 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 92, in query_content
-    response = openai_service.search_content(query, processed_docs)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 93, in search_content
-    search_response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
-2025-05-07 12:31:59,369 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-07 12:31:59,371 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 92, in query_content
-    response = openai_service.search_content(query, processed_docs)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 93, in search_content
-    search_response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
-2025-05-07 12:35:05,193 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:35:10,560 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:35:26,396 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:35:31,599 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 12:37:17,507 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 20:37:59,027 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 23:08:05,025 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-07 23:08:05,028 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 62, in upload_document
-    chunks, tags = openai_service.process_document(extracted_content, filename, filetype=filetype)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 54, in process_document
-    chunk_response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
-2025-05-07 23:09:31,372 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-07 23:09:31,376 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 62, in upload_document
-    chunks, tags = openai_service.process_document(extracted_content, filename, filetype=filetype)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 54, in process_document
-    chunk_response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
-2025-05-07 23:14:07,321 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 23:14:07,330 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 67, in upload_document
-    embedding = openai.Embedding.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
-    return getattr(self.__get_proxied__(), attr)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
-    return self.__load__()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
-    raise APIRemovedInV1(symbol=self._symbol)
-openai.lib._old_api.APIRemovedInV1: 
+2025-05-12 12:27:21,324 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 12:27:22,314 [INFO] === FULL CONTEXT BEING FED TO GPT ===
+2025-05-12 12:27:22,315 [INFO] Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
 
-You tried to access openai.Embedding, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
 
-You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
 
-Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
 
-A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?
+• An Atlas mentality - where you carry all the burdens without help?
+• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
+2025-05-12 12:27:22,315 [INFO] === END CONTEXT ===
+2025-05-12 12:27:22,315 [INFO] 
+=== COMPLETE MESSAGES BEING SENT TO GPT ===
+2025-05-12 12:27:22,315 [INFO] 
+--- Message 1 ---
+2025-05-12 12:27:22,315 [INFO] Role: system
+2025-05-12 12:27:22,315 [INFO] Content:
+You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). You extract relevant materials from context and format them as structured lesson resources aligned with WCE's core values and behavioral competencies.
+2025-05-12 12:27:22,315 [INFO] --- End Message ---
+2025-05-12 12:27:22,315 [INFO] 
+--- Message 2 ---
+2025-05-12 12:27:22,315 [INFO] Role: user
+2025-05-12 12:27:22,315 [INFO] Content:
 
-2025-05-07 23:18:59,719 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 23:18:59,871 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:00,637 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:01,357 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:02,174 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:02,788 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:03,096 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:03,812 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:19:04,886 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 75, in upload_document
-    pinecone_service.upsert_chunks(filename, chunk_objs, tags)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/pinecone_service.py", line 31, in upsert_chunks
-    self.index.upsert(vectors)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 11, in inner_func
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 141, in upsert
-    return self._upsert_batch(vectors, namespace, _check_type, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 167, in _upsert_batch
-    return self._vector_api.upsert_vectors(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 102, in __call__
-    return self.callable(self, *args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/core/openapi/db_data/api/vector_operations_api.py", line 675, in __upsert_vectors
-    return self.call_with_http_info(**kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 134, in call_with_http_info
-    return self.api_client.call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 300, in call_api
-    return self.__call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 178, in __call_api
-    raise e
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 166, in __call_api
-    response_data = self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 380, in request
-    return self.rest_client.POST(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 146, in POST
-    return self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_urllib3.py", line 260, in request
-    return raise_exceptions_or_return(r)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 49, in raise_exceptions_or_return
-    raise PineconeApiException(http_resp=r)
-pinecone.openapi_support.exceptions.PineconeApiException: (400)
-Reason: Bad Request
-HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 08 May 2025 04:19:04 GMT', 'Content-Type': 'application/json', 'Content-Length': '150', 'Connection': 'keep-alive', 'x-pinecone-request-latency-ms': '701', 'x-pinecone-request-id': '108280469814778587', 'x-envoy-upstream-service-time': '133', 'server': 'envoy'})
-HTTP response body: {"code":3,"message":"Metadata value must be a string, number, boolean or list of strings, got '{\"Action\":\"Refle...' for field 'tags'","details":[]}
+I need you to analyze the provided context and extract the most relevant material for developing a lesson plan for the Wolff Center for Entrepreneurship (WCE) at the University of Houston's C. T. Bauer College of Business.
 
-2025-05-07 23:21:24,321 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-07 23:21:24,821 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:21:25,009 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:21:25,332 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:21:25,845 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:21:26,068 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:21:26,708 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:22:33,383 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:22:33,722 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 119, in query_content
-    response = openai.ChatCompletion.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
-    return getattr(self.__get_proxied__(), attr)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
-    return self.__load__()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
-    raise APIRemovedInV1(symbol=self._symbol)
-openai.lib._old_api.APIRemovedInV1: 
+The WCE is guided by a philosophy centered on empowering students to understand their values, articulate their dreams, and achieve tangible outcomes. The program emphasizes both academic rigor and real-world application, preparing students to assume leadership roles in business by teaching them how to develop and implement their own ventures. WCE fosters personal and professional growth through mentorship, experiential learning, and a commitment to integrity and innovation.
 
-You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+Our program focuses on four core value categories, each with four specific behavioral competencies:
 
-You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+1. ACTION
+   - Results
+   - Execution
+   - Fearless Presenter
+   - Seize Opportunities
 
-Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+2. RELATIONSHIPS
+   - Connection
+   - Leadership
+   - Collaboration
+   - Awareness
 
-A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+3. DISCIPLINE
+   - Planning
+   - Constructive Thinking
+   - Organize
+   - Control
 
-2025-05-07 23:22:37,539 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:22:37,617 [ERROR] Error in /query endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 119, in query_content
-    response = openai.ChatCompletion.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
-    return getattr(self.__get_proxied__(), attr)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
-    return self.__load__()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/lib/_old_api.py", line 33, in __load__
-    raise APIRemovedInV1(symbol=self._symbol)
-openai.lib._old_api.APIRemovedInV1: 
+4. PURPOSE
+   - Authenticity
+   - CEO Perspective
+   - Vision
+   - Growth Mindset
 
-You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+For the behavioral competency: We want to develop a lesson plan on 'Seize Opportunities' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
 
-You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+Please extract 8-10 relevant sections from the context, provide precise references for each, and suggest how to incorporate them into our entrepreneurship-focused lesson plan. Each suggestion should specifically reinforce the behavioral competency while aligning with WCE's overall philosophy. Conclude with an overall approach for teaching this competency.
 
-Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+In the reference output, please explicitly mention the filename from the content. It is listed in the metadata at the top of each file as "filename".
 
-A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+The additional user and assistant prompts are only for reference. Do not use them in your response. Please only use use the context provided. Do not assume the lesson plan the user is asking for, allow them to tell you. 
 
-2025-05-07 23:24:30,476 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-07 23:24:39,111 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-08 14:10:48,972 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-08 14:10:50,198 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 12:54:51,926 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 12:54:54,242 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 12:55:33,618 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 12:55:35,585 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 13:18:21,770 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 13:18:32,998 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 13:20:35,240 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 13:20:49,868 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 13:21:57,241 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 13:22:06,072 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 13:23:40,212 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 13:23:59,531 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 16:06:16,111 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 16:06:30,027 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-09 16:10:52,781 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-09 16:11:09,179 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 12:36:45,522 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 12:36:55,375 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 12:44:25,851 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 12:44:38,326 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 12:47:11,696 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 12:47:24,149 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:37:56,391 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:37:57,258 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:37:58,264 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:37:58,951 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:37:59,602 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:38:00,407 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:38:01,169 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:38:01,608 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:38:02,139 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:38:03,026 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:39:17,573 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:39:28,785 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:40:44,074 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:40:44,497 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:41:46,212 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 534, in _make_request
-    response = conn.getresponse()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 516, in getresponse
-    httplib_response = super().getresponse()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1349, in getresponse
-    response.begin()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 285, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-http.client.RemoteDisconnected: Remote end closed connection without response
+Context:
+Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
 
-During handling of the above exception, another exception occurred:
+The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
 
-Traceback (most recent call last):
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 11, in inner_func
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 141, in upsert
-    return self._upsert_batch(vectors, namespace, _check_type, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 167, in _upsert_batch
-    return self._vector_api.upsert_vectors(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 102, in __call__
-    return self.callable(self, *args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/core/openapi/db_data/api/vector_operations_api.py", line 675, in __upsert_vectors
-    return self.call_with_http_info(**kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 134, in call_with_http_info
-    return self.api_client.call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 300, in call_api
-    return self.__call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 166, in __call_api
-    response_data = self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 380, in request
-    return self.rest_client.POST(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 146, in POST
-    return self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_urllib3.py", line 183, in request
-    r = self.pool_manager.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/_request_methods.py", line 143, in request
-    return self.request_encode_body(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/poolmanager.py", line 443, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 841, in urlopen
-    retries = retries.increment(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/util/retry.py", line 474, in increment
-    raise reraise(type(error), error, _stacktrace)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/util/util.py", line 38, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 534, in _make_request
-    response = conn.getresponse()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 516, in getresponse
-    httplib_response = super().getresponse()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1349, in getresponse
-    response.begin()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 285, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
 
-The above exception was the direct cause of the following exception:
+Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
 
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 75, in upload_document
-    pinecone_service.upsert_chunks(filename, chunk_objs, tags)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/pinecone_service.py", line 32, in upsert_chunks
-    self.index.upsert(vectors)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 20, in inner_func
-    raise ProtocolError("Failed to connect; did you specify the correct index name?") from e
-urllib3.exceptions.ProtocolError: Failed to connect; did you specify the correct index name?
-2025-05-10 13:41:53,804 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:41:54,247 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:41:55,014 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:42:56,756 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 534, in _make_request
-    response = conn.getresponse()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 516, in getresponse
-    httplib_response = super().getresponse()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1349, in getresponse
-    response.begin()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 285, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-http.client.RemoteDisconnected: Remote end closed connection without response
+30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?
+• An Atlas mentality - where you carry all the burdens without help?
+• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
 
-During handling of the above exception, another exception occurred:
+2025-05-12 12:27:22,315 [INFO] --- End Message ---
+2025-05-12 12:27:22,315 [INFO] 
+--- Message 3 ---
+2025-05-12 12:27:22,315 [INFO] Role: user
+2025-05-12 12:27:22,315 [INFO] Content:
+We want to develop a lesson plan on 'Fearless Presenter' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
+2025-05-12 12:27:22,315 [INFO] --- End Message ---
+2025-05-12 12:27:22,315 [INFO] 
+--- Message 4 ---
+2025-05-12 12:27:22,315 [INFO] Role: assistant
+2025-05-12 12:27:22,315 [INFO] Content:
 
-Traceback (most recent call last):
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 11, in inner_func
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 141, in upsert
-    return self._upsert_batch(vectors, namespace, _check_type, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/data/index.py", line 167, in _upsert_batch
-    return self._vector_api.upsert_vectors(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 102, in __call__
-    return self.callable(self, *args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/core/openapi/db_data/api/vector_operations_api.py", line 675, in __upsert_vectors
-    return self.call_with_http_info(**kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/endpoint.py", line 134, in call_with_http_info
-    return self.api_client.call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 300, in call_api
-    return self.__call_api(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 166, in __call_api
-    response_data = self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/api_client.py", line 380, in request
-    return self.rest_client.POST(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_utils.py", line 146, in POST
-    return self.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/openapi_support/rest_urllib3.py", line 183, in request
-    r = self.pool_manager.request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/_request_methods.py", line 143, in request
-    return self.request_encode_body(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/poolmanager.py", line 443, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 841, in urlopen
-    retries = retries.increment(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/util/retry.py", line 474, in increment
-    raise reraise(type(error), error, _stacktrace)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/util/util.py", line 38, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 534, in _make_request
-    response = conn.getresponse()
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/urllib3/connection.py", line 516, in getresponse
-    httplib_response = super().getresponse()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1349, in getresponse
-    response.begin()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 285, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+{
+  "competency": "Fearless Presenter",
+  "category": "ACTION",
+  "extracts": [
+    {
+      "content": "Effective communication is not merely about slide design or voice projection—it's about conveying conviction in your venture's value proposition. Research indicates that investors make preliminary funding decisions within the first 3 minutes of a pitch, responding primarily to the founder's passionate belief in their solution.",
+      "reference": "Entrepreneurial_Communication_Guide.pdf, Chapter 4, 'Pitch Psychology,' Pages 78-82",
+      "teaching_suggestion": "Structure a progressive pitching exercise where students present the same concept three times with increasing stakes: first to a peer, then to a small group, and finally to a panel of visiting entrepreneurs. Provide specific feedback on how their conviction comes through in each iteration."
+    },
+    {
+      "content": "Fear management techniques distinguish novice from experienced presenters. The entrepreneurial mindset reframes presentation anxiety as excitement, utilizing physiological arousal as fuel rather than allowing it to become an obstacle to effective delivery.",
+      "reference": "Founder_Psychology_Handbook.pdf, Section 5.3, 'Performance Under Pressure'",
+      "teaching_suggestion": "Teach specific pre-presentation routines that embrace nervous energy, including power posing, controlled breathing, and positive visualization. Have students develop personalized 5-minute pre-presentation rituals they can implement before important pitches."
+    },
+    {
+      "content": "Story-driven presentations generate 63% better recall than fact-based approaches. The entrepreneurial narrative arc—establishing the problem, revealing the journey to the solution, and painting the vision of impact—creates both emotional connection and logical understanding.",
+      "reference": "Pitch_Deck_Development_Manual.pdf, Chapter 2, 'Narrative Structures for Entrepreneurs'",
+      "teaching_suggestion": "Challenge students to identify their venture's 'origin story' and craft it into a 2-minute opening that establishes both credibility and emotional resonance before any business metrics are shared."
+    },
+    {
+      "content": "Data visualization literacy separates memorable presentations from forgettable ones. Entrepreneurs must transform complex business information into instantly comprehensible visual insights that support rather than overwhelm their core message.",
+      "reference": "Data_Communication_Guide.pdf, Pages 45-51, 'Visual Storytelling for Business Impact'",
+      "teaching_suggestion": "Conduct a workshop where students bring their venture's most complex dataset and develop three different visualization approaches, then test which creates the fastest understanding with audience members."
+    }
+  ],
+  "lesson_approach": "To develop 'Fearless Presenter' competency in WCE students, I recommend an immersive approach that integrates technical presentation skills with emotional resilience building. The lesson should begin by addressing the psychological barriers many entrepreneurs face when presenting their ventures, framing fear as a natural response that can be channeled productively. I suggest implementing a 'presentation laboratory' format where students regularly present in increasingly challenging scenarios—from informal peer sessions to formal investor panels with real-world entrepreneurs. Throughout this progression, focus on three pillars: (1) authentic message development that aligns with the student's personal values, (2) strategic presentation design that emphasizes story over slides, and (3) embodied communication techniques that build physical confidence. The most effective approach would culminate in a high-stakes presentation opportunity where students must respond to unexpected challenges or questions, reinforcing WCE's action-oriented philosophy. Consider recording presentations at various stages of development so students can witness their own growth, reinforcing the Growth Mindset competency from the Purpose category while building their confidence as Fearless Presenters."
+}
 
-The above exception was the direct cause of the following exception:
 
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 75, in upload_document
-    pinecone_service.upsert_chunks(filename, chunk_objs, tags)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/pinecone_service.py", line 32, in upsert_chunks
-    self.index.upsert(vectors)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/pinecone/utils/error_handling.py", line 20, in inner_func
-    raise ProtocolError("Failed to connect; did you specify the correct index name?") from e
-urllib3.exceptions.ProtocolError: Failed to connect; did you specify the correct index name?
-2025-05-10 13:43:25,045 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 13:43:26,276 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:43:26,648 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:44:54,893 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 13:45:03,601 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 14:46:26,467 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 14:46:26,471 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 14:47:42,966 [INFO] Retrying request to /chat/completions in 0.879985 seconds
-2025-05-10 14:47:52,582 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 14:47:52,587 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 890, in _request
-    return self._retry_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 925, in _retry_request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 14:48:01,591 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 14:48:01,593 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 14:48:40,661 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 14:48:40,666 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 15:12:11,850 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 15:12:11,855 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 15:12:29,787 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-05-10 15:12:29,791 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_image(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 153, in extract_text_from_image
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "You uploaded an unsupported image. Please make sure your image has of one the following formats: ['png', 'jpeg', 'gif', 'webp'].", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_format'}}
-2025-05-10 15:15:28,566 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-05-10 15:15:28,569 [INFO] Retrying request to /chat/completions in 0.813276 seconds
-2025-05-10 15:15:34,913 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-05-10 15:15:34,914 [INFO] Retrying request to /chat/completions in 1.519829 seconds
-2025-05-10 15:15:41,924 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
-2025-05-10 15:15:41,926 [ERROR] Error in /upload endpoint
-Traceback (most recent call last):
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/app.py", line 59, in upload_document
-    extracted_content, filetype = document_processor.extract_content(filename, content)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/document_processor.py", line 19, in extract_content
-    text = self.openai_service.extract_text_from_file(file_content.read(), file_path)
-  File "/Users/filip/dev/data-processing-moss/head-n-heart-gpt/backend/openai_service.py", line 172, in extract_text_from_file
-    response = self.client.chat.completions.create(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 299, in wrapper
-    return func(*args, **kwargs)
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions.py", line 598, in create
-    return self._post(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1055, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 834, in request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 865, in _request
-    return self._retry_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 925, in _retry_request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 865, in _request
-    return self._retry_request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 925, in _retry_request
-    return self._request(
-  File "/Users/filip/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 877, in _request
-    raise self._make_status_error_from_response(err.response) from None
-openai.RateLimitError: Error code: 429 - {'error': {'message': 'Request too large for gpt-4o in organization org-hN5QPiXaoPvmesHQwihb0LV8 on tokens per min (TPM): Limit 450000, Requested 5595936. The input or output tokens must be reduced in order to run successfully. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
-2025-05-10 15:18:59,317 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:18:59,954 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:19:00,577 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:01,258 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:01,872 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:02,523 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:03,044 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:03,214 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:03,529 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:19:03,769 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:07,266 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:27:08,428 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:27:09,351 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:09,861 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:10,374 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:11,296 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:11,461 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:27:12,020 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:37:28,533 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:37:29,188 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:37:46,923 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:37:48,064 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:05,422 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:06,551 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:24,599 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:26,581 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:47,037 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:38:49,084 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:11,186 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:12,334 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:32,984 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:34,186 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:53,552 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:39:54,534 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:12,446 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:13,660 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:36,588 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:37,503 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:54,883 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:40:56,116 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:11,130 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:11,996 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:24,677 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:25,948 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:39,935 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:45,105 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-05-10 15:41:46,867 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:47,461 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:48,143 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:48,356 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:48,911 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:49,244 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:49,850 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:50,315 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:50,859 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:51,370 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:51,750 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:51,998 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:52,288 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:52,656 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:53,214 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:53,723 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:53,940 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:54,796 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:55,155 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:55,349 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:55,649 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:55,960 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:56,130 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:56,326 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:56,470 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:56,793 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:56,990 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:57,285 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:57,716 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:57,990 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:58,406 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:58,566 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:59,085 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:59,354 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:59,575 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:41:59,923 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:00,256 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:00,482 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:00,865 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:01,298 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:01,465 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:01,749 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:01,923 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:42:02,082 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:44:45,959 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-10 15:44:54,366 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 12:27:22,316 [INFO] --- End Message ---
+2025-05-12 12:27:22,316 [INFO] 
+--- Message 5 ---
+2025-05-12 12:27:22,316 [INFO] Role: user
+2025-05-12 12:27:22,316 [INFO] Content:
+We want to develop a lesson plan on 'CEO Perspective' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value.
+2025-05-12 12:27:22,316 [INFO] --- End Message ---
+2025-05-12 12:27:22,316 [INFO] 
+--- Message 6 ---
+2025-05-12 12:27:22,316 [INFO] Role: assistant
+2025-05-12 12:27:22,316 [INFO] Content:
+
+
+{
+  "competency": "CEO Perspective",
+  "category": "PURPOSE",
+  "extracts": [
+    {
+      "content": "The CEO Perspective requires entrepreneurs to simultaneously hold three time horizons: immediate tactical execution, mid-range strategic positioning, and long-term vision fulfillment. Research with successful founders reveals that this cognitive flexibility—switching between operational details and big-picture thinking—correlates strongly with venture longevity.",
+      "reference": "Executive_Mindset_Manual.pdf, Chapter 3, 'Temporal Leadership Dimensions,' Pages 72-79",
+      "teaching_suggestion": "Implement a 'three horizons exercise' where students make decisions about the same business challenge from three different timeframes (next week, next year, next decade), then analyze how these perspectives lead to different priorities and actions."
+    },
+    {
+      "content": "CEO Perspective encompasses the ability to analyze stakeholder ecosystems holistically. Novice entrepreneurs often optimize for customer needs alone, while experienced founders balance the interests of customers, team members, investors, partners, and community with sophisticated tradeoff analysis.",
+      "reference": "Stakeholder_Management_Guide.pdf, Section 4.2, 'Multi-constituency Decision Making'",
+      "teaching_suggestion": "Create a stakeholder simulation where student teams navigate a complex business decision with actors representing different stakeholders with competing interests. Debrief by evaluating how effectively they balanced diverse needs while staying true to core venture values."
+    },
+    {
+      "content": "The psychological burden of ultimate accountability distinguishes the CEO role from all others. Research on entrepreneur resilience indicates that those who develop rituals for processing failure, celebrating small wins, and maintaining perspective during crises demonstrate significantly higher leadership effectiveness scores.",
+      "reference": "Founder_Psychology_Report.pdf, Pages 115-127, 'Decision-Making Under Uncertainty'",
+      "teaching_suggestion": "Establish a regular 'CEO reflection practice' where students document their decision processes, assumptions, and emotional responses to outcomes. Partner with the Psychology department to provide structured feedback on their self-awareness and emotional regulation strategies."
+    },
+    {
+      "content": "Houston's most successful entrepreneurs demonstrate a distinct form of CEO Perspective through their ability to connect industry-specific opportunities with broader economic and social trends. This contextual intelligence—seeing how their venture fits within larger systems—enables more strategic resource allocation and more compelling narrative creation.",
+      "reference": "Houston_Entrepreneurship_Case_Studies.pdf, Volume 3, 'Systems Thinking in Practice'",
+      "teaching_suggestion": "Organize small-group sessions with successful Houston CEOs where students present their analysis of how macro trends impact their specific venture concept, receiving feedback on their contextual intelligence and systems thinking."
+    },
+    {
+      "content": "Financial literacy transforms from a technical skill to a strategic advantage when entrepreneurs develop what veteran CEOs call 'number sense'—the ability to quickly identify which metrics truly drive business health and which are vanity metrics that distract from core value creation.",
+      "reference": "Financial_Leadership_for_Entrepreneurs.pdf, Chapter 8, 'From Accounting to Strategy'",
+      "teaching_suggestion": "Challenge students to identify the 3-5 most critical metrics for their venture and defend why these specific numbers deserve CEO attention. Have them create a one-page 'CEO Dashboard' that would guide their weekly decision-making."
+    }
+  ],
+  "lesson_approach": "To develop the 'CEO Perspective' competency under the PURPOSE core value, I recommend a lesson approach that balances conceptual understanding with experiential learning. Begin with a session exploring the distinction between management (doing things right) and leadership (doing the right things), using case studies that illustrate how CEO Perspective manifests in entrepreneurial decision-making. The heart of the lesson should utilize a comprehensive business simulation where students rotate through the CEO role, facing escalating challenges that require them to balance competing priorities, make decisions with incomplete information, and communicate their reasoning to various stakeholders. Critical to this approach is structured reflection after each simulation round, where students articulate how their decisions align with both immediate business needs and longer-term vision. Throughout the lesson, deliberately connect CEO Perspective to the other PURPOSE competencies, particularly Vision and Authenticity, showing how effective CEOs maintain alignment between personal values, company mission, and strategic decisions. Consider partnering with the WCE mentorship network to arrange shadow opportunities where students observe real CEOs navigating complex decisions, followed by debrief conversations about the thought processes witnessed. The assessment should evaluate students not on the specific decisions made, but on their ability to articulate comprehensive reasoning that demonstrates holistic understanding of their venture's ecosystem."
+}
+     
+
+2025-05-12 12:27:22,316 [INFO] --- End Message ---
+2025-05-12 12:27:22,316 [INFO] 
+--- Message 7 ---
+2025-05-12 12:27:22,316 [INFO] Role: user
+2025-05-12 12:27:22,316 [INFO] Content:
+Context:
+Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
+
+The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
+
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
+
+Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
+
+30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?
+• An Atlas mentality - where you carry all the burdens without help?
+• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
+
+Question: We want to develop a lesson plan on 'Seize Opportunities' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
+2025-05-12 12:27:22,316 [INFO] --- End Message ---
+2025-05-12 12:27:22,316 [INFO] 
+=== END MESSAGES ===
+2025-05-12 12:27:35,327 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
