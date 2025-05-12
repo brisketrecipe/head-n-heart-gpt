@@ -115,11 +115,23 @@ async def query_content(request: Request):
         )
         query_embedding = query_embedding_response.data[0].embedding
         # Query Pinecone
-        matches = pinecone_service.query(query_embedding, top_k=5)
+        matches = pinecone_service.query(query_embedding, top_k=20)
         # Gather context from top chunks
         chunks = [match["metadata"]["chunkText"] for match in matches]
         context = "\n\n".join(chunks)
         
+                # Log each chunk individually with metadata
+        logging.info("=== CHUNKS RETRIEVED FROM PINECONE ===")
+        for i, match in enumerate(matches):
+            logging.info(f"CHUNK {i+1}:")
+            logging.info(f"Text: {match['metadata']['chunkText']}")
+            # Log any other metadata available in the match
+            for key, value in match['metadata'].items():
+                if key != 'chunkText':
+                    logging.info(f"{key}: {value}")
+            logging.info("---")
+        logging.info("=== END CHUNKS ===")
+
         # Log the context and prompt
         logging.info("=== FULL CONTEXT BEING FED TO GPT ===")
         logging.info(context)
@@ -127,7 +139,16 @@ async def query_content(request: Request):
         
         # Use GPT-4o to answer
         messages = [
-            {"role": "system", "content": "You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). You extract relevant materials from context and format them as structured lesson resources aligned with WCE's core values and behavioral competencies."},
+      {"role": "system", "content": """You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). 
+
+IMPORTANT INSTRUCTIONS FOR EXTRACTING CONTENT:
+1. Extract ONLY direct quotes from the provided context. Do NOT paraphrase or summarize.
+2. Each chunk may come from different documents - look for a 'filename' field in the chunk metadata if available.
+3. If the filename is not explicitly given, refer to the chunk by its content and position (e.g., "Chunk about Law of Curiosity").
+4. When providing references, be specific about where in the document the content appears (e.g., section title, page if available).
+5. If you can't find an exact location reference, explicitly state "Reference: [Document name], exact location unknown".
+
+Your goal is to provide a structured lesson plan with accurate, directly quoted content and precise source attributions."""},
             {"role": "user", "content": f"""
 I need you to analyze the provided context and extract the most relevant material for developing a lesson plan for the Wolff Center for Entrepreneurship (WCE) at the University of Houston's C. T. Bauer College of Business.
 
