@@ -117,9 +117,33 @@ async def query_content(request: Request):
         # Query Pinecone
         matches = pinecone_service.query(query_embedding, top_k=20)
         # Gather context from top chunks
+
+        # ADD THIS: Log each chunk with its metadata
+        logging.info("=== CHUNKS RETRIEVED FROM PINECONE ===")
+        for i, match in enumerate(matches):
+            metadata = match["metadata"]
+            chunk_text = metadata.get("chunkText", "")
+            chunk_tags = json.loads(metadata.get("tags", "[]"))
+            
+            logging.info(f"CHUNK {i+1}:")
+            logging.info(f"ID: {metadata.get('chunk_id', f'chunk-{i}')}")
+            logging.info(f"Filename: {metadata.get('filename', 'unknown')}")
+            logging.info(f"Tags: {chunk_tags}")
+            logging.info(f"Text: {chunk_text[:300]}...")
+            logging.info("---")
+        logging.info("=== END CHUNKS ===")
+
         chunks = [match["metadata"]["chunkText"] for match in matches]
-        context = "\n\n".join(chunks)
-        
+        # context = "\n\n".join(chunks)
+        context = ""
+        for i, match in enumerate(matches):
+            metadata = match["metadata"]
+            context += f"\n--- CHUNK {i+1} ---\n"
+            context += f"Source: {metadata.get('filename', 'unknown')}\n"
+            context += f"Tags: {metadata.get('tags', '[]')}\n" 
+            context += f"Content: {metadata.get('chunkText', '')}\n"
+            context += "---\n"
+                
                 # Log each chunk individually with metadata
         logging.info("=== CHUNKS RETRIEVED FROM PINECONE ===")
         for i, match in enumerate(matches):
@@ -147,6 +171,7 @@ IMPORTANT INSTRUCTIONS FOR EXTRACTING CONTENT:
 3. If the filename is not explicitly given, refer to the chunk by its content and position (e.g., "Chunk about Law of Curiosity").
 4. When providing references, be specific about where in the document the content appears (e.g., section title, page if available).
 5. If you can't find an exact location reference, explicitly state "Reference: [Document name], exact location unknown".
+6. If the content doesn't contain information about a requested competency, don't include that chunk dont attempt to extract irrelevant content.
 
 Your goal is to provide a structured lesson plan with accurate, directly quoted content and precise source attributions."""},
             {"role": "user", "content": f"""

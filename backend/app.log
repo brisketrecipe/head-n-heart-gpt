@@ -1,251 +1,771 @@
-2025-05-12 12:39:29,546 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
-2025-05-12 12:39:30,128 [INFO] === CHUNKS RETRIEVED FROM PINECONE ===
-2025-05-12 12:39:30,129 [INFO] CHUNK 1:
-2025-05-12 12:39:30,129 [INFO] Text: Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
-2025-05-12 12:39:30,129 [INFO] chunkIndex: 2.0
-2025-05-12 12:39:30,129 [INFO] filename: 30-Day_Growth_Plan-3.pdf
-2025-05-12 12:39:30,129 [INFO] tags: ["Action", "Purpose"]
-2025-05-12 12:39:30,129 [INFO] ---
-2025-05-12 12:39:30,129 [INFO] CHUNK 2:
-2025-05-12 12:39:30,129 [INFO] Text: The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
-2025-05-12 12:39:30,129 [INFO] chunkIndex: 6.0
-2025-05-12 12:39:30,129 [INFO] filename: 30-Day_Growth_Plan-3.pdf
-2025-05-12 12:39:30,129 [INFO] tags: ["Action", "Purpose"]
-2025-05-12 12:39:30,129 [INFO] ---
-2025-05-12 12:39:30,130 [INFO] CHUNK 3:
-2025-05-12 12:39:30,130 [INFO] Text: My team will read the following book to grow in our area of choice:
-____________________________________________________________________________________________________________________________________________________
-My team will read the following book to grow in our area of skill:
-____________________________________________________________________________________________________________________________________________________
-2025-05-12 12:39:30,130 [INFO] chunkIndex: 42.0
-2025-05-12 12:39:30,130 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,130 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,130 [INFO] ---
-2025-05-12 12:39:30,130 [INFO] CHUNK 4:
-2025-05-12 12:39:30,130 [INFO] Text: Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
-2025-05-12 12:39:30,130 [INFO] chunkIndex: 6.0
-2025-05-12 12:39:30,130 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,130 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,130 [INFO] ---
-2025-05-12 12:39:30,130 [INFO] CHUNK 5:
-2025-05-12 12:39:30,131 [INFO] Text: 30-DAY GROWTH PLAN 4The Law of Awareness:
+2025-05-12 13:58:27,593 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-12 13:58:28,027 [INFO] === CHUNKS RETRIEVED FROM PINECONE ===
+2025-05-12 13:58:28,027 [INFO] CHUNK 1:
+2025-05-12 13:58:28,027 [INFO] ID: chunk-0
+2025-05-12 13:58:28,027 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,028 [INFO] Tags: []
+2025-05-12 13:58:28,028 [INFO] Text: 30-DAY GROWTH PLAN 7The Law of the Modeling:
+It’s hard to improve when you have no one else but yourself to follow.
+Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
+It’s easier to grow when you have an example to follow. But as a leader, the bigger question i...
+2025-05-12 13:58:28,028 [INFO] ---
+2025-05-12 13:58:28,028 [INFO] CHUNK 2:
+2025-05-12 13:58:28,028 [INFO] ID: chunk-1
+2025-05-12 13:58:28,028 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,028 [INFO] Tags: []
+2025-05-12 13:58:28,028 [INFO] Text: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking 
+forward to walking beside you o n your leadership journey. 
+You downloaded this guide because y ou know something a lot of peo ple with great potential 
+miss, every leader needs to embrac e per sonal growth...
+2025-05-12 13:58:28,028 [INFO] ---
+2025-05-12 13:58:28,028 [INFO] CHUNK 3:
+2025-05-12 13:58:28,028 [INFO] ID: chunk-2
+2025-05-12 13:58:28,028 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,028 [INFO] Tags: []
+2025-05-12 13:58:28,028 [INFO] Text: Your plan is going to be personaliz ed and it’s 
+going to involve one ar
+ea of choice and one area 
+of skill. Just follow along with this PDF 
+worksheet and you’ll end these 30 days with 
+your own personalized growth plan, as you rely 
+on my teaching from The 15 Laws of Growth to 
+help spur your thi...
+2025-05-12 13:58:28,029 [INFO] ---
+2025-05-12 13:58:28,029 [INFO] CHUNK 4:
+2025-05-12 13:58:28,029 [INFO] ID: chunk-3
+2025-05-12 13:58:28,029 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,029 [INFO] Tags: []
+2025-05-12 13:58:28,029 [INFO] Text: 30-DAY GROWTH PLAN 4The Law of Awareness:
 Y ou must know yourself to grow yourself.
 Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
-The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
-• Rose-colored glasses - always seeing potential and not problems?
-• The glass half-empty - with a pessimistic attitude?
-• An Atlas mentality - where you carry all the burdens without help?
-• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
-It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-2025-05-12 12:39:30,131 [INFO] chunkIndex: 11.0
-2025-05-12 12:39:30,131 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,131 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,131 [INFO] ---
-2025-05-12 12:39:30,131 [INFO] CHUNK 6:
-2025-05-12 12:39:30,131 [INFO] Text: The Law of Awareness: Y ou must know yourself to grow yourself. ... It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-2025-05-12 12:39:30,131 [INFO] chunkIndex: 4.0
-2025-05-12 12:39:30,131 [INFO] filename: 30-Day_Growth_Plan-3.pdf
-2025-05-12 12:39:30,131 [INFO] tags: ["Action", "Purpose"]
-2025-05-12 12:39:30,131 [INFO] ---
-2025-05-12 12:39:30,131 [INFO] CHUNK 7:
-2025-05-12 12:39:30,131 [INFO] Text: 30-DAY GROWTH PLAN
-The area of choice where I will lead my team to grow is:
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this 
+can be a challe...
+2025-05-12 13:58:28,029 [INFO] ---
+2025-05-12 13:58:28,029 [INFO] CHUNK 5:
+2025-05-12 13:58:28,029 [INFO] ID: chunk-4
+2025-05-12 13:58:28,029 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,029 [INFO] Tags: []
+2025-05-12 13:58:28,029 [INFO] Text: 30-DAY GROWTH PLAN 13The area of choice where I will lead my team to grow is:
 ____________________________________________________________________________________________________________________________________________________
 The area of skill where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-2025-05-12 12:39:30,131 [INFO] chunkIndex: 40.0
-2025-05-12 12:39:30,132 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,132 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,132 [INFO] ---
-2025-05-12 12:39:30,132 [INFO] CHUNK 8:
-2025-05-12 12:39:30,132 [INFO] Text: Growth always comes in two areas: choice and skill. ... Your friend, 30-DAY GROWTH PLAN 3The Law of Intentionality: Watch and take notes on the video ... Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst invest in yourself because you can’t give what you don’t have.
-2025-05-12 12:39:30,132 [INFO] chunkIndex: 3.0
-2025-05-12 12:39:30,132 [INFO] filename: 30-Day_Growth_Plan-3.pdf
-2025-05-12 12:39:30,132 [INFO] tags: ["Action", "Purpose"]
-2025-05-12 12:39:30,132 [INFO] ---
-2025-05-12 12:39:30,132 [INFO] CHUNK 9:
-2025-05-12 12:39:30,132 [INFO] Text: Great leaders embrace a journey mentality. They understand that the process is the product—that what you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become. Day 17-20 Questions for Group Discussion: Where is one place you’ve developed a ﬁnish line mentality with your team? Why do you think that is, and what can you do to inspire fresh growth?
-2025-05-12 12:39:30,132 [INFO] chunkIndex: 25.0
-2025-05-12 12:39:30,132 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,132 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,132 [INFO] ---
-2025-05-12 12:39:30,132 [INFO] CHUNK 10:
-2025-05-12 12:39:30,132 [INFO] Text: Your plan is going to be personalized and it’s going to involve one area of choice and one area of skill. Just follow along with this PDF worksheet and you’ll end these 30 days with your own personalized growth plan, as you rely on my teaching from The 15 Laws of Growth to help spur your thinking. Let’s get started. Over the next 30 days, we’re going to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement. These are better expressed in three questions: • Where am I? • Where am I going?• How will I get there?
-2025-05-12 12:39:30,133 [INFO] chunkIndex: 4.0
-2025-05-12 12:39:30,133 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,133 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,133 [INFO] ---
-2025-05-12 12:39:30,133 [INFO] CHUNK 11:
-2025-05-12 12:39:30,133 [INFO] Text: 30-DAY GROWTH PLAN 6The Law of Curiosity: Growth is driven by wanting to learn more. Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet. Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
-2025-05-12 12:39:30,133 [INFO] chunkIndex: 18.0
-2025-05-12 12:39:30,133 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,133 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,133 [INFO] ---
-2025-05-12 12:39:30,133 [INFO] CHUNK 12:
-2025-05-12 12:39:30,133 [INFO] Text: 30-DAY GROWTH PLAN 10The Law of the Environment:
+_________________...
+2025-05-12 13:58:28,029 [INFO] ---
+2025-05-12 13:58:28,029 [INFO] CHUNK 6:
+2025-05-12 13:58:28,029 [INFO] ID: chunk-5
+2025-05-12 13:58:28,029 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,030 [INFO] Tags: []
+2025-05-12 13:58:28,030 [INFO] Text: 30-DAY GROWTH PLAN 10The Law of the Environment:
 Growth thrives in conducive surroundings.
 Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
-Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters.
-Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.
-2025-05-12 12:39:30,133 [INFO] chunkIndex: 32.0
-2025-05-12 12:39:30,133 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,133 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,133 [INFO] ---
-2025-05-12 12:39:30,134 [INFO] CHUNK 13:
-2025-05-12 12:39:30,134 [INFO] Text: 30-DAY GROWTH PLAN 7The Law of the Modeling:
+Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his 
+mentor and...
+2025-05-12 13:58:28,030 [INFO] ---
+2025-05-12 13:58:28,030 [INFO] CHUNK 7:
+2025-05-12 13:58:28,030 [INFO] ID: chunk-6
+2025-05-12 13:58:28,030 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,030 [INFO] Tags: []
+2025-05-12 13:58:28,030 [INFO] Text: 30-DAY GROWTH PLAN 6The Law of Curiosity:
+Growth is driven by wanting to learn more. 
+Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet.
+Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. 
+Fixed-minded lead...
+2025-05-12 13:58:28,030 [INFO] ---
+2025-05-12 13:58:28,030 [INFO] CHUNK 8:
+2025-05-12 13:58:28,030 [INFO] ID: chunk-7
+2025-05-12 13:58:28,030 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,030 [INFO] Tags: []
+2025-05-12 13:58:28,030 [INFO] Text: 30-DAY GROWTH PLAN 3The Law of Intentionality:
+Watch and take notes on the video “The Law of Intentionality” then come back to your worksheet.
+As John said in the video, growth is not automatic. 
+Nature suggests that growth just happens. 
+But that’s not the truth. 
+Change is automatic. 
+Change happe...
+2025-05-12 13:58:28,030 [INFO] ---
+2025-05-12 13:58:28,030 [INFO] CHUNK 9:
+2025-05-12 13:58:28,030 [INFO] ID: chunk-8
+2025-05-12 13:58:28,030 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,031 [INFO] Tags: []
+2025-05-12 13:58:28,031 [INFO] Text: 30-DAY GROWTH PLAN 9The Law of the Consistency:
+Motivation gets you going, but discipline keeps you growing.
+Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
+Consistency sounds boring. But as John talked about in the Law of Expansion, routine only becomes ...
+2025-05-12 13:58:28,031 [INFO] ---
+2025-05-12 13:58:28,031 [INFO] CHUNK 10:
+2025-05-12 13:58:28,031 [INFO] ID: chunk-9
+2025-05-12 13:58:28,031 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,031 [INFO] Tags: []
+2025-05-12 13:58:28,031 [INFO] Text: 30-DAY GROWTH PLAN 12My area of choice where I will grow is:
+____________________________________________________________________________________________________________________________________________________
+My area of skill where I will grow is:
+___________________________________________________...
+2025-05-12 13:58:28,031 [INFO] ---
+2025-05-12 13:58:28,031 [INFO] CHUNK 11:
+2025-05-12 13:58:28,031 [INFO] ID: chunk-10
+2025-05-12 13:58:28,031 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,031 [INFO] Tags: []
+2025-05-12 13:58:28,031 [INFO] Text: 30-DAY GROWTH PLAN 5The Law of the Mirror:
+How we see ourselves determines how we invest in ourselves.
+Watch and take notes on the video “The Law of the Mirror” then co me back to your worksheet.
+How do you see yourself? John often ta lks about our lives as  a story—we’re living out a st ory for oth...
+2025-05-12 13:58:28,031 [INFO] ---
+2025-05-12 13:58:28,031 [INFO] CHUNK 12:
+2025-05-12 13:58:28,031 [INFO] ID: chunk-11
+2025-05-12 13:58:28,031 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,031 [INFO] Tags: []
+2025-05-12 13:58:28,032 [INFO] Text: 30-DAY GROWTH PLAN 11The Law of the Design:
+To maximize growth, develop strategies.
+Watch and take notes on the video “The Law of Design” then come back to your worksheet.
+We’ve ﬁnally arrived at the Law of Design, which is all about the strategies we develop to help us achieve 
+our personal growth....
+2025-05-12 13:58:28,032 [INFO] ---
+2025-05-12 13:58:28,032 [INFO] CHUNK 13:
+2025-05-12 13:58:28,032 [INFO] ID: chunk-12
+2025-05-12 13:58:28,032 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,032 [INFO] Tags: []
+2025-05-12 13:58:28,032 [INFO] Text: 30-DAY GROWTH PLAN 8The Law of the Expansion:
+Growth always increases your capacity.
+Watch and take notes on the video “The Law of Expansion” then come back to your worksheet.
+Several years ago, Nike released one of their most famous commercials. Simple and sparse, the 
+commercial features nothing b...
+2025-05-12 13:58:28,032 [INFO] ---
+2025-05-12 13:58:28,032 [INFO] CHUNK 14:
+2025-05-12 13:58:28,032 [INFO] ID: chunk-13
+2025-05-12 13:58:28,032 [INFO] Filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,032 [INFO] Tags: []
+2025-05-12 13:58:28,032 [INFO] Text: JOHN C. MAXWELLDiscover where you are. Determine where you are going. 
+Plan how you’ll get there....
+2025-05-12 13:58:28,032 [INFO] ---
+2025-05-12 13:58:28,032 [INFO] === END CHUNKS ===
+2025-05-12 13:58:28,033 [INFO] === CHUNKS RETRIEVED FROM PINECONE ===
+2025-05-12 13:58:28,033 [INFO] CHUNK 1:
+2025-05-12 13:58:28,033 [INFO] Text: 30-DAY GROWTH PLAN 7The Law of the Modeling:
 It’s hard to improve when you have no one else but yourself to follow.
 Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
 It’s easier to grow when you have an example to follow. But as a leader, the bigger question isn’t whose 
 example will you follow; it’s what kind of example will you set? Even if you haven’t found a mentor, it doesn’t mean you can’t be a mentor. In fact, one of the best ways to really understand what to look for in a mentor is to become one yourself.
-2025-05-12 12:39:30,134 [INFO] chunkIndex: 21.0
-2025-05-12 12:39:30,134 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,134 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,136 [INFO] ---
-2025-05-12 12:39:30,136 [INFO] CHUNK 14:
-2025-05-12 12:39:30,137 [INFO] Text: 30-DAY GROWTH PLAN 12
-My area of choice where I will grow is:
-____________________________________________________________________________________________________________________________________________________
-My area of skill where I will grow is:
-____________________________________________________________________________________________________________________________________________________
-A person I will ask to mentor/coach me in my growth is:
-____________________________________________________________________________________________________________________________________________________
-2025-05-12 12:39:30,137 [INFO] chunkIndex: 37.0
-2025-05-12 12:39:30,137 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,139 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,139 [INFO] ---
-2025-05-12 12:39:30,139 [INFO] CHUNK 15:
-2025-05-12 12:39:30,139 [INFO] Text: 30-DAY GROWTH PLAN 9The Law of the Consistency:
-Motivation gets you going, but discipline keeps you growing.
-Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
-2025-05-12 12:39:30,140 [INFO] chunkIndex: 27.0
-2025-05-12 12:39:30,140 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,140 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,140 [INFO] ---
-2025-05-12 12:39:30,140 [INFO] CHUNK 16:
-2025-05-12 12:39:30,140 [INFO] Text: Day 14-16
+Chances are you might start your wish list of mentoring qualities with things like talent, success, 
+achievement, reputation. While those are good things to have in a mentor, it’s far better to have moral authority. That means being a person of character, conviction, and integrity—and sustaining that life over time. You don’t have the be the world’s greatest all-around human in order to have moral authority. You can distinguish yourself in any number of areas while still growing yourself in others.Day 14-16
 Questions for Group Discussion:
 Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
-If you could be known for one thing, what would you want it to be? What would it
-take to get that level of respect? What value could you pass on as a mentor? Do you
-know anyone who might want to learn from you? Who on your team has moral
+If you could be known for one thing, what would you want it to be? What would it 
+take to get that level of respect? What value could you pass on as a mentor? Do you 
+know anyone who might want to learn from you? Who on your team has moral 
 authority with you? What makes you trust them in this way?
-2025-05-12 12:39:30,140 [INFO] chunkIndex: 23.0
-2025-05-12 12:39:30,140 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,140 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,140 [INFO] ---
-2025-05-12 12:39:30,140 [INFO] CHUNK 17:
-2025-05-12 12:39:30,140 [INFO] Text: Questions for Group Discussion: In your opinion, why do people get change and growth confused? Of the choices you make with your team, how many are made in the moment and how many are based on strategy?
-2025-05-12 12:39:30,140 [INFO] chunkIndex: 10.0
-2025-05-12 12:39:30,141 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,141 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,141 [INFO] ---
-2025-05-12 12:39:30,141 [INFO] CHUNK 18:
-2025-05-12 12:39:30,141 [INFO] Text: Day 21-23
+2025-05-12 13:58:28,039 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-7
+2025-05-12 13:58:28,039 [INFO] chunkIndex: 7.0
+2025-05-12 13:58:28,039 [INFO] context: 
+2025-05-12 13:58:28,039 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,039 [INFO] summary: 
+2025-05-12 13:58:28,040 [INFO] tags: []
+2025-05-12 13:58:28,040 [INFO] ---
+2025-05-12 13:58:28,040 [INFO] CHUNK 2:
+2025-05-12 13:58:28,040 [INFO] Text: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking 
+forward to walking beside you o n your leadership journey. 
+You downloaded this guide because y ou know something a lot of peo ple with great potential 
+miss, every leader needs to embrac e per sonal growth in order to creat e growth in their 
+business, team, community, or wit h an ything outside of themsel eves .
+Everything you want out of life  will come through your willingn ess to grow. That’s because  you 
+can’t give what you don’t have , and you can’t lead where you don’t  go.
+Each section will be an exploratio n of a diﬀerent facet of growth,  complete with deep dives  into 
+pressing topics, reﬂection time, a nd growth-oriented work.
+The next 30 days will transform  your  approach to your daily lif e if you take this plan ser iously. 
+Be intentional and you’ll see inc redible results.
+This guide is designed for you  to take t his personal growth jo urney alone OR with a friend or 
+group. It’s up to you. There are reﬂect ion and discussion guides  throughout for both personal 
+and group study.
+Let’s dive right in with two key two ques tions you need to consider:
+• What keeps you from being authentic with others?
+• What barriers to authenticity (beliefs, fears, experiences, etc.) do you struggle against?
+Answering these questions lets you know if you’re being honest enough with yourself to take 
+this journey. It also tells you where your growth is going to be most important and most challenging through this process.
+Take some time to reﬂect and write out your answers. Then, if you’re feeling bold and really 
+want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment.
+Once you’ve taken that ﬁrst step, it’s time to dive in. Get ready, get set, grow.
+30-DAY GROWTH PLAN 1Developing Y our 30-Day Growth Plan
+2025-05-12 13:58:28,040 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-1
+2025-05-12 13:58:28,040 [INFO] chunkIndex: 1.0
+2025-05-12 13:58:28,041 [INFO] context: 
+2025-05-12 13:58:28,041 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,041 [INFO] summary: 
+2025-05-12 13:58:28,041 [INFO] tags: []
+2025-05-12 13:58:28,041 [INFO] ---
+2025-05-12 13:58:28,041 [INFO] CHUNK 3:
+2025-05-12 13:58:28,041 [INFO] Text: Your plan is going to be personaliz ed and it’s 
+going to involve one ar
+ea of choice and one area 
+of skill. Just follow along with this PDF 
+worksheet and you’ll end these 30 days with 
+your own personalized growth plan, as you rely 
+on my teaching from The 15 Laws of Growth to 
+help spur your thinking. Let’s get started.Over the next 30 days, we’re going  to develop our growth 
+plans together along the following three axes—Assessment, 
+Ambition, 
+Advancement.
+These are better expressed in three questions:
+• Where am I?
+• Where am I going?• How will I get there?
+PASSION
+Early in my career, I met a mento r who provided me with a personal growth kit—an all-in-
+one guide to ﬁve areas of my life. I had never invested in myself in this way, and I soon 
+realized that growth is the only guarantee that tomorrow would be better than today. 
+So, it’s best to have a plan for strategic growth.
+Growth always comes in two areas: choice and skill. As I teach, a reas of choice are more 
+like soft-skills—attitude, belief, perspective, values, conﬁdence,  faith, and trust. Areas of 
+skill are more akin to hard-skills—writing, planning, strategy, coding, ﬁtness, diet, 
+professional development, etc.
+Your friend, 
+2025-05-12 13:58:28,041 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-2
+2025-05-12 13:58:28,041 [INFO] chunkIndex: 2.0
+2025-05-12 13:58:28,042 [INFO] context: 
+2025-05-12 13:58:28,042 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,042 [INFO] summary: 
+2025-05-12 13:58:28,042 [INFO] tags: []
+2025-05-12 13:58:28,042 [INFO] ---
+2025-05-12 13:58:28,042 [INFO] CHUNK 4:
+2025-05-12 13:58:28,042 [INFO] Text: 30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this 
+can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?• An Atlas mentality - where you carry all the burdens without help?• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and 
+weaknesses.
+BONUS:
+John’s podcast on identifying leadership blind spots oﬀers bonus insights into seeing yourself 
+realistically. Download the PDF notes and listen here: https://johnmaxwellleadershippodcast.com/episodes/leadership-blind-spots
+No one can produce great things who is not thoroughly sincere in dealing with him- or herself.”Day 4-6
 Questions for Group Discussion:
-In what areas does your team struggle the most with consistency or do best with being consistent? As a leader, why do you think they struggle in one area and succeed in the other?
-2025-05-12 12:39:30,141 [INFO] chunkIndex: 30.0
-2025-05-12 12:39:30,141 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,141 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,142 [INFO] ---
-2025-05-12 12:39:30,142 [INFO] CHUNK 19:
-2025-05-12 12:39:30,142 [INFO] Text: Take some time to reflect and write out your answers. Then, if you’re feeling bold and really want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment. Once you’ve taken that first step, it’s time to dive in. Get ready, get set, grow. 30-DAY GROWTH PLAN 1Developing Your 30-Day Growth Plan
-2025-05-12 12:39:30,146 [INFO] chunkIndex: 3.0
-2025-05-12 12:39:30,146 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,146 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,146 [INFO] ---
-2025-05-12 12:39:30,146 [INFO] CHUNK 20:
-2025-05-12 12:39:30,146 [INFO] Text: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking forward to walking beside you o n your leadership journey. You downloaded this guide because you know something a lot of people with great potential miss, every leader needs to embrace per sonal growth in order to create growth in their business, team, community, or anything outside of themselves. Everything you want out of life  will come through your willingness to grow. That’s because  you can’t give what you don’t have , and you can’t lead where you don’t go. Each section will be an exploration of a different facet of growth, complete with deep dives into pressing topics, reflection time, and growth-oriented work. The next 30 days will transform your approach to your daily life if you take this plan seriously. Be intentional and you'll see incredible results.
-2025-05-12 12:39:30,147 [INFO] chunkIndex: 1.0
-2025-05-12 12:39:30,147 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
-2025-05-12 12:39:30,147 [INFO] tags: [{"tags": ["Planning", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Authenticity", "Planning", "Connection"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Execution", "Authenticity"]}, {"competencies": ["Growth Mindset", "Planning", "Leadership", "Strategy", "Results"]}, {"tags": ["Awareness", "Leadership", "Authenticity", "Growth Mindset"]}, {"tags": ["Authenticity", "Leadership", "Growth Mindset", "Vision", "Awareness"]}, {"tags": ["Growth Mindset", "Leadership", "Awareness", "Authenticity", "Results"]}, {"competencies": ["Leadership", "Awareness", "Authenticity", "Growth Mindset", "Vision"]}, {"tags": ["Growth Mindset", "Leadership", "Vision", "Results", "Awareness"]}, {"tags": ["Growth Mindset", "Planning", "Organize", "Control", "Leadership"]}, {"tags": ["Growth Mindset", "Leadership", "Planning", "Awareness", "Vision"]}, {"tags": ["Execution", "Growth Mindset", "Planning", "Collaboration", "Vision"]}, {"tags": ["Growth Mindset", "Planning", "Vision", "Leadership", "Control"]}, {"tags": ["Leadership", "Growth Mindset", "Planning", "Vision", "Collaboration"]}]
-2025-05-12 12:39:30,147 [INFO] ---
-2025-05-12 12:39:30,147 [INFO] === END CHUNKS ===
-2025-05-12 12:39:30,147 [INFO] === FULL CONTEXT BEING FED TO GPT ===
-2025-05-12 12:39:30,147 [INFO] Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
-
-The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
-
+What strengths and weaknesses did you discover in yourself?
+In thinking of your team’s strengths and weaknesses, what do you think your team would write?Questions for Journal Reﬂection:
+What strengths and weaknesses in yourself can you recognize? What are your team’s strengths 
+and weaknesses?
+2025-05-12 13:58:28,042 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-4
+2025-05-12 13:58:28,042 [INFO] chunkIndex: 4.0
+2025-05-12 13:58:28,042 [INFO] context: 
+2025-05-12 13:58:28,042 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,042 [INFO] summary: 
+2025-05-12 13:58:28,042 [INFO] tags: []
+2025-05-12 13:58:28,042 [INFO] ---
+2025-05-12 13:58:28,042 [INFO] CHUNK 5:
+2025-05-12 13:58:28,042 [INFO] Text: 30-DAY GROWTH PLAN 13The area of choice where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+The area of skill where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+A person I will ask to mentor/coach my team in my growth is:
+____________________________________________________________________________________________________________________________________________________
 My team will read the following book to grow in our area of choice:
 ____________________________________________________________________________________________________________________________________________________
 My team will read the following book to grow in our area of skill:
 ____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
-
-30-DAY GROWTH PLAN 4The Law of Awareness:
-Y ou must know yourself to grow yourself.
-Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
-The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
-• Rose-colored glasses - always seeing potential and not problems?
-• The glass half-empty - with a pessimistic attitude?
-• An Atlas mentality - where you carry all the burdens without help?
-• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
-It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-The Law of Awareness: Y ou must know yourself to grow yourself. ... It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-30-DAY GROWTH PLAN
-The area of choice where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-The area of skill where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. ... Your friend, 30-DAY GROWTH PLAN 3The Law of Intentionality: Watch and take notes on the video ... Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst invest in yourself because you can’t give what you don’t have.
-
-Great leaders embrace a journey mentality. They understand that the process is the product—that what you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become. Day 17-20 Questions for Group Discussion: Where is one place you’ve developed a ﬁnish line mentality with your team? Why do you think that is, and what can you do to inspire fresh growth?
-
-Your plan is going to be personalized and it’s going to involve one area of choice and one area of skill. Just follow along with this PDF worksheet and you’ll end these 30 days with your own personalized growth plan, as you rely on my teaching from The 15 Laws of Growth to help spur your thinking. Let’s get started. Over the next 30 days, we’re going to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement. These are better expressed in three questions: • Where am I? • Where am I going?• How will I get there?
-
-30-DAY GROWTH PLAN 6The Law of Curiosity: Growth is driven by wanting to learn more. Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet. Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
-
-30-DAY GROWTH PLAN 10The Law of the Environment:
+My Rule of 5 for my team is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+TEAM
+2025-05-12 13:58:28,043 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-13
+2025-05-12 13:58:28,043 [INFO] chunkIndex: 13.0
+2025-05-12 13:58:28,043 [INFO] context: 
+2025-05-12 13:58:28,043 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,043 [INFO] summary: 
+2025-05-12 13:58:28,043 [INFO] tags: []
+2025-05-12 13:58:28,043 [INFO] ---
+2025-05-12 13:58:28,043 [INFO] CHUNK 6:
+2025-05-12 13:58:28,043 [INFO] Text: 30-DAY GROWTH PLAN 10The Law of the Environment:
 Growth thrives in conducive surroundings.
 Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
-Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters.
-Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.
-
-30-DAY GROWTH PLAN 7The Law of the Modeling:
-It’s hard to improve when you have no one else but yourself to follow.
-Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
-It’s easier to grow when you have an example to follow. But as a leader, the bigger question isn’t whose 
-example will you follow; it’s what kind of example will you set? Even if you haven’t found a mentor, it doesn’t mean you can’t be a mentor. In fact, one of the best ways to really understand what to look for in a mentor is to become one yourself.
-
-30-DAY GROWTH PLAN 12
-My area of choice where I will grow is:
+Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his 
+mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters. 
+Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky 
+and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.Day 24-26
+Questions for Group Discussion:
+Would you say you create a growth environment for your team? If so, what do you do 
+to create one? If not, what can you do to create one?Questions for Journal Reﬂection:
+Who do you know who helps you grow?
+What books in your areas of skill and choice do you need to read?
+What changes do you need to make in your routine to nourish and refresh yourself?
+2025-05-12 13:58:28,043 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-10
+2025-05-12 13:58:28,043 [INFO] chunkIndex: 10.0
+2025-05-12 13:58:28,043 [INFO] context: 
+2025-05-12 13:58:28,043 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,043 [INFO] summary: 
+2025-05-12 13:58:28,043 [INFO] tags: []
+2025-05-12 13:58:28,043 [INFO] ---
+2025-05-12 13:58:28,043 [INFO] CHUNK 7:
+2025-05-12 13:58:28,043 [INFO] Text: 30-DAY GROWTH PLAN 6The Law of Curiosity:
+Growth is driven by wanting to learn more. 
+Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet.
+Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. 
+Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. 
+Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your 
+history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
+BONUS:
+Writer and scientist Carol S. Dweck in her book Mindset: The New Psychology of Success writes that 
+ﬁxed mindsets believe a person’s qualities are set traits and not capable of being changed. Growth mindsets believe learning and intelligence can grow with time and experience. Explore which mindset you embrace and think through your culture, upbringing, and experiences brought you to that mindset.Day 11-13
+Questions for Group Discussion:
+Which kind of person are you: the one who asks Why or the one who asks Why Not? Give 
+context to your answer
+ What kinds of things do you do to fuel your curiosity or feed your interests?Questions for Journal Reﬂection:
+What are you curious about? Have you done much to investigate those subjects?
+Why or why not? Who on your team is naturally curious? How can you tell? What can you 
+learn from them?
+2025-05-12 13:58:28,043 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-6
+2025-05-12 13:58:28,044 [INFO] chunkIndex: 6.0
+2025-05-12 13:58:28,044 [INFO] context: 
+2025-05-12 13:58:28,044 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,044 [INFO] summary: 
+2025-05-12 13:58:28,044 [INFO] tags: []
+2025-05-12 13:58:28,044 [INFO] ---
+2025-05-12 13:58:28,044 [INFO] CHUNK 8:
+2025-05-12 13:58:28,044 [INFO] Text: 30-DAY GROWTH PLAN 3The Law of Intentionality:
+Watch and take notes on the video “The Law of Intentionality” then come back to your worksheet.
+As John said in the video, growth is not automatic. 
+Nature suggests that growth just happens. 
+But that’s not the truth. 
+Change is automatic. 
+Change happens whether you like it or not, but growth is guided change. 
+Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst 
+invest in yourself because you can’t give what you don’t have.
+Growth is the only 
+guarantee that 
+tomorrow is going 
+to get better.”Day 1-3
+Questions for Journal Reﬂection:
+How many choices in your day are intentional? Of those, how many are choices 
+in the moment and how many are the result of a strategy?
+Questions for Group Discussion:
+In your opinion, why do people get change and growth confused?
+Of the choices you make with your team, how many are made in the moment and 
+how many are based on strategy?
+2025-05-12 13:58:28,044 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-3
+2025-05-12 13:58:28,044 [INFO] chunkIndex: 3.0
+2025-05-12 13:58:28,044 [INFO] context: 
+2025-05-12 13:58:28,044 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,044 [INFO] summary: 
+2025-05-12 13:58:28,044 [INFO] tags: []
+2025-05-12 13:58:28,044 [INFO] ---
+2025-05-12 13:58:28,044 [INFO] CHUNK 9:
+2025-05-12 13:58:28,044 [INFO] Text: 30-DAY GROWTH PLAN 9The Law of the Consistency:
+Motivation gets you going, but discipline keeps you growing.
+Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
+Consistency sounds boring. But as John talked about in the Law of Expansion, routine only becomes 
+boring when it’s measured against a ﬁnish line. When we understand that daily habits compound into excellence, it reframes our way of thinking. 
+One of John’s most helpful strategies in this area is the Rule of 5. For example, John doesn’t crank out 
+more than 100 books by just writing when he feels like it. Every day he does ﬁve things to stay consistent in his writing: reads, thinks, writes, ﬁles, and asks questions. Consistency is achieved when we can develop the necessary habits that will point us towards success, and habits are developed best when they are strategic and simple. A daily Rule of 5 for yourself and your team are essential for growth.Day 21-23
+Questions for Group Discussion:
+In what areas does your team struggle the most with consistency or do best with 
+being consistent? As a leader, why do you think they struggle in one area and 
+succeed in the other?Questions for Journal Reﬂection:
+In what areas of your life are you most consistent or inconsistent? Why?
+2025-05-12 13:58:28,045 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-9
+2025-05-12 13:58:28,045 [INFO] chunkIndex: 9.0
+2025-05-12 13:58:28,045 [INFO] context: 
+2025-05-12 13:58:28,045 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,045 [INFO] summary: 
+2025-05-12 13:58:28,045 [INFO] tags: []
+2025-05-12 13:58:28,045 [INFO] ---
+2025-05-12 13:58:28,046 [INFO] CHUNK 10:
+2025-05-12 13:58:28,046 [INFO] Text: 30-DAY GROWTH PLAN 12My area of choice where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 My area of skill where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 A person I will ask to mentor/coach me in my growth is:
 ____________________________________________________________________________________________________________________________________________________
-
-30-DAY GROWTH PLAN 9The Law of the Consistency:
-Motivation gets you going, but discipline keeps you growing.
-Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
-
-Day 14-16
+I will read the following books to grow in my area of choice:
+____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+Personal
+2025-05-12 13:58:28,047 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-12
+2025-05-12 13:58:28,048 [INFO] chunkIndex: 12.0
+2025-05-12 13:58:28,048 [INFO] context: 
+2025-05-12 13:58:28,048 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,048 [INFO] summary: 
+2025-05-12 13:58:28,048 [INFO] tags: []
+2025-05-12 13:58:28,048 [INFO] ---
+2025-05-12 13:58:28,048 [INFO] CHUNK 11:
+2025-05-12 13:58:28,048 [INFO] Text: 30-DAY GROWTH PLAN 5The Law of the Mirror:
+How we see ourselves determines how we invest in ourselves.
+Watch and take notes on the video “The Law of the Mirror” then co me back to your worksheet.
+How do you see yourself? John often ta lks about our lives as  a story—we’re living out a st ory for others 
+to read. If you don’t see yourself as  the hero of your own st ory, you  don’t have a high-enough 
+self-image. You determine what  cou rse your life will take. Yo u decide what dreams you will ch ase, wh at 
+impact you will make, and what  legacy you will leave. 
+The Law of Mirror is the perfect time a ccept and embrace the tr uth that you are worthy of 
+investment, and that your leader ship lives or dies on the inve stment s you make in yourself. In  the 
+video, John said, “You have to bet on yo urself ﬁrst.” This is where we all must decide whether we’re 
+willing to make that bet. Are y ou all-in?Day 7-10
+Questions for Group Discussion:
+How is your self-image on a scale of 1-10?
+How is your self-investment on a scale of 1-10?
+What’s the diﬀerence between your self-image and your self-investment?Questions for Journal Reﬂection:
+What changes do you need to make to become the hero of your own story? What 
+would the outcome be for your team? When was the last time you bet big on yourself 
+and what were the results?
+2025-05-12 13:58:28,048 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-5
+2025-05-12 13:58:28,048 [INFO] chunkIndex: 5.0
+2025-05-12 13:58:28,048 [INFO] context: 
+2025-05-12 13:58:28,048 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,048 [INFO] summary: 
+2025-05-12 13:58:28,049 [INFO] tags: []
+2025-05-12 13:58:28,049 [INFO] ---
+2025-05-12 13:58:28,049 [INFO] CHUNK 12:
+2025-05-12 13:58:28,049 [INFO] Text: 30-DAY GROWTH PLAN 11The Law of the Design:
+To maximize growth, develop strategies.
+Watch and take notes on the video “The Law of Design” then come back to your worksheet.
+We’ve ﬁnally arrived at the Law of Design, which is all about the strategies we develop to help us achieve 
+our personal growth. The ﬁnal step in developing your personal growth plan will be ﬁlling out the two Growth Plan Outlines that we’ve provided—one for you and one if you’re doing this exercise with a team.
+But the real work begins after today. You have to execute on the plan you’ve developed, otherwise all of 
+this work will be for nothing. This is where you have to determine again that you will pay the price to grow.
+We’re in this together. As you’re ﬁlling out these sheets, share them with a friend or mentor, 
+communicate your observations about your plan, and ask them where they see room to reﬁne it. John says that the key to making any growth plan stick is making it public, and after 30 days, you’ll not only have a solid plan, but a community of support along the way.Day 27-30
+2025-05-12 13:58:28,049 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-11
+2025-05-12 13:58:28,049 [INFO] chunkIndex: 11.0
+2025-05-12 13:58:28,049 [INFO] context: 
+2025-05-12 13:58:28,049 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,049 [INFO] summary: 
+2025-05-12 13:58:28,049 [INFO] tags: []
+2025-05-12 13:58:28,049 [INFO] ---
+2025-05-12 13:58:28,050 [INFO] CHUNK 13:
+2025-05-12 13:58:28,050 [INFO] Text: 30-DAY GROWTH PLAN 8The Law of the Expansion:
+Growth always increases your capacity.
+Watch and take notes on the video “The Law of Expansion” then come back to your worksheet.
+Several years ago, Nike released one of their most famous commercials. Simple and sparse, the 
+commercial features nothing but a runner, images of famous athletes projected onto buildings as the runner passes by, a haunting piano score, and Nike’s most famous (at the time) tagline: “There is no ﬁnish line.”
+As John discussed in the video clip, ﬁnish line mentality takes a short-term view on the process of 
+growth; people with a ﬁnish line mentality want to grow right now.
+Great leaders embrace a journey mentality. They understand that the process is the product—that what 
+you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become.Day 17-20
+Questions for Group Discussion:
+Where is one place you’ve developed a ﬁnish line mentality with your team?
+Why do you think that is, and what can you do to inspire fresh growth?Questions for Journal Reﬂection:
+Where have you developed a ﬁnish line mentality and need to shake things up? 
+What is your biggest life dream?
+How will you know when you’re achieved that dream?
+2025-05-12 13:58:28,050 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-8
+2025-05-12 13:58:28,050 [INFO] chunkIndex: 8.0
+2025-05-12 13:58:28,050 [INFO] context: 
+2025-05-12 13:58:28,050 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,050 [INFO] summary: 
+2025-05-12 13:58:28,050 [INFO] tags: []
+2025-05-12 13:58:28,050 [INFO] ---
+2025-05-12 13:58:28,050 [INFO] CHUNK 14:
+2025-05-12 13:58:28,050 [INFO] Text: JOHN C. MAXWELLDiscover where you are. Determine where you are going. 
+Plan how you’ll get there.
+2025-05-12 13:58:28,050 [INFO] chunkId: 30-Day_Growth_Plan_Again.pdf-chunk-0
+2025-05-12 13:58:28,050 [INFO] chunkIndex: 0.0
+2025-05-12 13:58:28,050 [INFO] context: 
+2025-05-12 13:58:28,051 [INFO] filename: 30-Day_Growth_Plan_Again.pdf
+2025-05-12 13:58:28,051 [INFO] summary: 
+2025-05-12 13:58:28,051 [INFO] tags: []
+2025-05-12 13:58:28,051 [INFO] ---
+2025-05-12 13:58:28,051 [INFO] === END CHUNKS ===
+2025-05-12 13:58:28,051 [INFO] === FULL CONTEXT BEING FED TO GPT ===
+2025-05-12 13:58:28,051 [INFO] 
+--- CHUNK 1 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 7The Law of the Modeling:
+It’s hard to improve when you have no one else but yourself to follow.
+Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
+It’s easier to grow when you have an example to follow. But as a leader, the bigger question isn’t whose 
+example will you follow; it’s what kind of example will you set? Even if you haven’t found a mentor, it doesn’t mean you can’t be a mentor. In fact, one of the best ways to really understand what to look for in a mentor is to become one yourself.
+Chances are you might start your wish list of mentoring qualities with things like talent, success, 
+achievement, reputation. While those are good things to have in a mentor, it’s far better to have moral authority. That means being a person of character, conviction, and integrity—and sustaining that life over time. You don’t have the be the world’s greatest all-around human in order to have moral authority. You can distinguish yourself in any number of areas while still growing yourself in others.Day 14-16
 Questions for Group Discussion:
 Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
-If you could be known for one thing, what would you want it to be? What would it
-take to get that level of respect? What value could you pass on as a mentor? Do you
-know anyone who might want to learn from you? Who on your team has moral
+If you could be known for one thing, what would you want it to be? What would it 
+take to get that level of respect? What value could you pass on as a mentor? Do you 
+know anyone who might want to learn from you? Who on your team has moral 
 authority with you? What makes you trust them in this way?
+---
 
-Questions for Group Discussion: In your opinion, why do people get change and growth confused? Of the choices you make with your team, how many are made in the moment and how many are based on strategy?
+--- CHUNK 2 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking 
+forward to walking beside you o n your leadership journey. 
+You downloaded this guide because y ou know something a lot of peo ple with great potential 
+miss, every leader needs to embrac e per sonal growth in order to creat e growth in their 
+business, team, community, or wit h an ything outside of themsel eves .
+Everything you want out of life  will come through your willingn ess to grow. That’s because  you 
+can’t give what you don’t have , and you can’t lead where you don’t  go.
+Each section will be an exploratio n of a diﬀerent facet of growth,  complete with deep dives  into 
+pressing topics, reﬂection time, a nd growth-oriented work.
+The next 30 days will transform  your  approach to your daily lif e if you take this plan ser iously. 
+Be intentional and you’ll see inc redible results.
+This guide is designed for you  to take t his personal growth jo urney alone OR with a friend or 
+group. It’s up to you. There are reﬂect ion and discussion guides  throughout for both personal 
+and group study.
+Let’s dive right in with two key two ques tions you need to consider:
+• What keeps you from being authentic with others?
+• What barriers to authenticity (beliefs, fears, experiences, etc.) do you struggle against?
+Answering these questions lets you know if you’re being honest enough with yourself to take 
+this journey. It also tells you where your growth is going to be most important and most challenging through this process.
+Take some time to reﬂect and write out your answers. Then, if you’re feeling bold and really 
+want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment.
+Once you’ve taken that ﬁrst step, it’s time to dive in. Get ready, get set, grow.
+30-DAY GROWTH PLAN 1Developing Y our 30-Day Growth Plan
+---
 
-Day 21-23
+--- CHUNK 3 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Your plan is going to be personaliz ed and it’s 
+going to involve one ar
+ea of choice and one area 
+of skill. Just follow along with this PDF 
+worksheet and you’ll end these 30 days with 
+your own personalized growth plan, as you rely 
+on my teaching from The 15 Laws of Growth to 
+help spur your thinking. Let’s get started.Over the next 30 days, we’re going  to develop our growth 
+plans together along the following three axes—Assessment, 
+Ambition, 
+Advancement.
+These are better expressed in three questions:
+• Where am I?
+• Where am I going?• How will I get there?
+PASSION
+Early in my career, I met a mento r who provided me with a personal growth kit—an all-in-
+one guide to ﬁve areas of my life. I had never invested in myself in this way, and I soon 
+realized that growth is the only guarantee that tomorrow would be better than today. 
+So, it’s best to have a plan for strategic growth.
+Growth always comes in two areas: choice and skill. As I teach, a reas of choice are more 
+like soft-skills—attitude, belief, perspective, values, conﬁdence,  faith, and trust. Areas of 
+skill are more akin to hard-skills—writing, planning, strategy, coding, ﬁtness, diet, 
+professional development, etc.
+Your friend, 
+---
+
+--- CHUNK 4 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this 
+can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?• An Atlas mentality - where you carry all the burdens without help?• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and 
+weaknesses.
+BONUS:
+John’s podcast on identifying leadership blind spots oﬀers bonus insights into seeing yourself 
+realistically. Download the PDF notes and listen here: https://johnmaxwellleadershippodcast.com/episodes/leadership-blind-spots
+No one can produce great things who is not thoroughly sincere in dealing with him- or herself.”Day 4-6
 Questions for Group Discussion:
-In what areas does your team struggle the most with consistency or do best with being consistent? As a leader, why do you think they struggle in one area and succeed in the other?
+What strengths and weaknesses did you discover in yourself?
+In thinking of your team’s strengths and weaknesses, what do you think your team would write?Questions for Journal Reﬂection:
+What strengths and weaknesses in yourself can you recognize? What are your team’s strengths 
+and weaknesses?
+---
 
-Take some time to reflect and write out your answers. Then, if you’re feeling bold and really want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment. Once you’ve taken that first step, it’s time to dive in. Get ready, get set, grow. 30-DAY GROWTH PLAN 1Developing Your 30-Day Growth Plan
+--- CHUNK 5 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 13The area of choice where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+The area of skill where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+A person I will ask to mentor/coach my team in my growth is:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 for my team is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+TEAM
+---
 
-Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking forward to walking beside you o n your leadership journey. You downloaded this guide because you know something a lot of people with great potential miss, every leader needs to embrace per sonal growth in order to create growth in their business, team, community, or anything outside of themselves. Everything you want out of life  will come through your willingness to grow. That’s because  you can’t give what you don’t have , and you can’t lead where you don’t go. Each section will be an exploration of a different facet of growth, complete with deep dives into pressing topics, reflection time, and growth-oriented work. The next 30 days will transform your approach to your daily life if you take this plan seriously. Be intentional and you'll see incredible results.
-2025-05-12 12:39:30,148 [INFO] === END CONTEXT ===
-2025-05-12 12:39:30,149 [INFO] 
+--- CHUNK 6 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 10The Law of the Environment:
+Growth thrives in conducive surroundings.
+Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
+Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his 
+mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters. 
+Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky 
+and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.Day 24-26
+Questions for Group Discussion:
+Would you say you create a growth environment for your team? If so, what do you do 
+to create one? If not, what can you do to create one?Questions for Journal Reﬂection:
+Who do you know who helps you grow?
+What books in your areas of skill and choice do you need to read?
+What changes do you need to make in your routine to nourish and refresh yourself?
+---
+
+--- CHUNK 7 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 6The Law of Curiosity:
+Growth is driven by wanting to learn more. 
+Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet.
+Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. 
+Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. 
+Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your 
+history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
+BONUS:
+Writer and scientist Carol S. Dweck in her book Mindset: The New Psychology of Success writes that 
+ﬁxed mindsets believe a person’s qualities are set traits and not capable of being changed. Growth mindsets believe learning and intelligence can grow with time and experience. Explore which mindset you embrace and think through your culture, upbringing, and experiences brought you to that mindset.Day 11-13
+Questions for Group Discussion:
+Which kind of person are you: the one who asks Why or the one who asks Why Not? Give 
+context to your answer
+ What kinds of things do you do to fuel your curiosity or feed your interests?Questions for Journal Reﬂection:
+What are you curious about? Have you done much to investigate those subjects?
+Why or why not? Who on your team is naturally curious? How can you tell? What can you 
+learn from them?
+---
+
+--- CHUNK 8 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 3The Law of Intentionality:
+Watch and take notes on the video “The Law of Intentionality” then come back to your worksheet.
+As John said in the video, growth is not automatic. 
+Nature suggests that growth just happens. 
+But that’s not the truth. 
+Change is automatic. 
+Change happens whether you like it or not, but growth is guided change. 
+Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst 
+invest in yourself because you can’t give what you don’t have.
+Growth is the only 
+guarantee that 
+tomorrow is going 
+to get better.”Day 1-3
+Questions for Journal Reﬂection:
+How many choices in your day are intentional? Of those, how many are choices 
+in the moment and how many are the result of a strategy?
+Questions for Group Discussion:
+In your opinion, why do people get change and growth confused?
+Of the choices you make with your team, how many are made in the moment and 
+how many are based on strategy?
+---
+
+--- CHUNK 9 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 9The Law of the Consistency:
+Motivation gets you going, but discipline keeps you growing.
+Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
+Consistency sounds boring. But as John talked about in the Law of Expansion, routine only becomes 
+boring when it’s measured against a ﬁnish line. When we understand that daily habits compound into excellence, it reframes our way of thinking. 
+One of John’s most helpful strategies in this area is the Rule of 5. For example, John doesn’t crank out 
+more than 100 books by just writing when he feels like it. Every day he does ﬁve things to stay consistent in his writing: reads, thinks, writes, ﬁles, and asks questions. Consistency is achieved when we can develop the necessary habits that will point us towards success, and habits are developed best when they are strategic and simple. A daily Rule of 5 for yourself and your team are essential for growth.Day 21-23
+Questions for Group Discussion:
+In what areas does your team struggle the most with consistency or do best with 
+being consistent? As a leader, why do you think they struggle in one area and 
+succeed in the other?Questions for Journal Reﬂection:
+In what areas of your life are you most consistent or inconsistent? Why?
+---
+
+--- CHUNK 10 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 12My area of choice where I will grow is:
+____________________________________________________________________________________________________________________________________________________
+My area of skill where I will grow is:
+____________________________________________________________________________________________________________________________________________________
+A person I will ask to mentor/coach me in my growth is:
+____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of choice:
+____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+Personal
+---
+
+--- CHUNK 11 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 5The Law of the Mirror:
+How we see ourselves determines how we invest in ourselves.
+Watch and take notes on the video “The Law of the Mirror” then co me back to your worksheet.
+How do you see yourself? John often ta lks about our lives as  a story—we’re living out a st ory for others 
+to read. If you don’t see yourself as  the hero of your own st ory, you  don’t have a high-enough 
+self-image. You determine what  cou rse your life will take. Yo u decide what dreams you will ch ase, wh at 
+impact you will make, and what  legacy you will leave. 
+The Law of Mirror is the perfect time a ccept and embrace the tr uth that you are worthy of 
+investment, and that your leader ship lives or dies on the inve stment s you make in yourself. In  the 
+video, John said, “You have to bet on yo urself ﬁrst.” This is where we all must decide whether we’re 
+willing to make that bet. Are y ou all-in?Day 7-10
+Questions for Group Discussion:
+How is your self-image on a scale of 1-10?
+How is your self-investment on a scale of 1-10?
+What’s the diﬀerence between your self-image and your self-investment?Questions for Journal Reﬂection:
+What changes do you need to make to become the hero of your own story? What 
+would the outcome be for your team? When was the last time you bet big on yourself 
+and what were the results?
+---
+
+--- CHUNK 12 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 11The Law of the Design:
+To maximize growth, develop strategies.
+Watch and take notes on the video “The Law of Design” then come back to your worksheet.
+We’ve ﬁnally arrived at the Law of Design, which is all about the strategies we develop to help us achieve 
+our personal growth. The ﬁnal step in developing your personal growth plan will be ﬁlling out the two Growth Plan Outlines that we’ve provided—one for you and one if you’re doing this exercise with a team.
+But the real work begins after today. You have to execute on the plan you’ve developed, otherwise all of 
+this work will be for nothing. This is where you have to determine again that you will pay the price to grow.
+We’re in this together. As you’re ﬁlling out these sheets, share them with a friend or mentor, 
+communicate your observations about your plan, and ask them where they see room to reﬁne it. John says that the key to making any growth plan stick is making it public, and after 30 days, you’ll not only have a solid plan, but a community of support along the way.Day 27-30
+---
+
+--- CHUNK 13 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 8The Law of the Expansion:
+Growth always increases your capacity.
+Watch and take notes on the video “The Law of Expansion” then come back to your worksheet.
+Several years ago, Nike released one of their most famous commercials. Simple and sparse, the 
+commercial features nothing but a runner, images of famous athletes projected onto buildings as the runner passes by, a haunting piano score, and Nike’s most famous (at the time) tagline: “There is no ﬁnish line.”
+As John discussed in the video clip, ﬁnish line mentality takes a short-term view on the process of 
+growth; people with a ﬁnish line mentality want to grow right now.
+Great leaders embrace a journey mentality. They understand that the process is the product—that what 
+you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become.Day 17-20
+Questions for Group Discussion:
+Where is one place you’ve developed a ﬁnish line mentality with your team?
+Why do you think that is, and what can you do to inspire fresh growth?Questions for Journal Reﬂection:
+Where have you developed a ﬁnish line mentality and need to shake things up? 
+What is your biggest life dream?
+How will you know when you’re achieved that dream?
+---
+
+--- CHUNK 14 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: JOHN C. MAXWELLDiscover where you are. Determine where you are going. 
+Plan how you’ll get there.
+---
+
+2025-05-12 13:58:28,052 [INFO] === END CONTEXT ===
+2025-05-12 13:58:28,052 [INFO] 
 === COMPLETE MESSAGES BEING SENT TO GPT ===
-2025-05-12 12:39:30,149 [INFO] 
+2025-05-12 13:58:28,052 [INFO] 
 --- Message 1 ---
-2025-05-12 12:39:30,149 [INFO] Role: system
-2025-05-12 12:39:30,149 [INFO] Content:
+2025-05-12 13:58:28,052 [INFO] Role: system
+2025-05-12 13:58:28,052 [INFO] Content:
 You are an expert curriculum developer specializing in entrepreneurship education at the Wolff Center for Entrepreneurship (WCE). 
 
 IMPORTANT INSTRUCTIONS FOR EXTRACTING CONTENT:
@@ -254,13 +774,14 @@ IMPORTANT INSTRUCTIONS FOR EXTRACTING CONTENT:
 3. If the filename is not explicitly given, refer to the chunk by its content and position (e.g., "Chunk about Law of Curiosity").
 4. When providing references, be specific about where in the document the content appears (e.g., section title, page if available).
 5. If you can't find an exact location reference, explicitly state "Reference: [Document name], exact location unknown".
+6. If the content doesn't contain information about a requested competency, don't include that chunk dont attempt to extract irrelevant content.
 
 Your goal is to provide a structured lesson plan with accurate, directly quoted content and precise source attributions.
-2025-05-12 12:39:30,149 [INFO] --- End Message ---
-2025-05-12 12:39:30,149 [INFO] 
+2025-05-12 13:58:28,052 [INFO] --- End Message ---
+2025-05-12 13:58:28,052 [INFO] 
 --- Message 2 ---
-2025-05-12 12:39:30,149 [INFO] Role: user
-2025-05-12 12:39:30,149 [INFO] Content:
+2025-05-12 13:58:28,052 [INFO] Role: user
+2025-05-12 13:58:28,052 [INFO] Content:
 
 I need you to analyze the provided context and extract the most relevant material for developing a lesson plan for the Wolff Center for Entrepreneurship (WCE) at the University of Houston's C. T. Bauer College of Business.
 
@@ -292,7 +813,7 @@ Our program focuses on four core value categories, each with four specific behav
    - Vision
    - Growth Mindset
 
-For the behavioral competency: We want to develop a lesson plan on 'Seize Opportunities' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
+For the behavioral competency: We want to develop a lesson plan on 'Authenticity' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value.
 
 Please extract 8-10 relevant sections from the context, provide precise references for each, and suggest how to incorporate them into our entrepreneurship-focused lesson plan. Each suggestion should specifically reinforce the behavioral competency while aligning with WCE's overall philosophy. Conclude with an overall approach for teaching this competency.
 
@@ -301,96 +822,307 @@ In the reference output, please explicitly mention the filename from the content
 The additional user and assistant prompts are only for reference. Do not use them in your response. Please only use use the context provided. Do not assume the lesson plan the user is asking for, allow them to tell you. 
 
 Context:
-Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
 
-The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
-
-My team will read the following book to grow in our area of choice:
-____________________________________________________________________________________________________________________________________________________
-My team will read the following book to grow in our area of skill:
-____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
-
-30-DAY GROWTH PLAN 4The Law of Awareness:
-Y ou must know yourself to grow yourself.
-Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
-The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
-• Rose-colored glasses - always seeing potential and not problems?
-• The glass half-empty - with a pessimistic attitude?
-• An Atlas mentality - where you carry all the burdens without help?
-• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
-It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-The Law of Awareness: Y ou must know yourself to grow yourself. ... It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-30-DAY GROWTH PLAN
-The area of choice where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-The area of skill where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. ... Your friend, 30-DAY GROWTH PLAN 3The Law of Intentionality: Watch and take notes on the video ... Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst invest in yourself because you can’t give what you don’t have.
-
-Great leaders embrace a journey mentality. They understand that the process is the product—that what you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become. Day 17-20 Questions for Group Discussion: Where is one place you’ve developed a ﬁnish line mentality with your team? Why do you think that is, and what can you do to inspire fresh growth?
-
-Your plan is going to be personalized and it’s going to involve one area of choice and one area of skill. Just follow along with this PDF worksheet and you’ll end these 30 days with your own personalized growth plan, as you rely on my teaching from The 15 Laws of Growth to help spur your thinking. Let’s get started. Over the next 30 days, we’re going to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement. These are better expressed in three questions: • Where am I? • Where am I going?• How will I get there?
-
-30-DAY GROWTH PLAN 6The Law of Curiosity: Growth is driven by wanting to learn more. Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet. Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
-
-30-DAY GROWTH PLAN 10The Law of the Environment:
-Growth thrives in conducive surroundings.
-Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
-Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters.
-Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.
-
-30-DAY GROWTH PLAN 7The Law of the Modeling:
+--- CHUNK 1 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 7The Law of the Modeling:
 It’s hard to improve when you have no one else but yourself to follow.
 Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
 It’s easier to grow when you have an example to follow. But as a leader, the bigger question isn’t whose 
 example will you follow; it’s what kind of example will you set? Even if you haven’t found a mentor, it doesn’t mean you can’t be a mentor. In fact, one of the best ways to really understand what to look for in a mentor is to become one yourself.
+Chances are you might start your wish list of mentoring qualities with things like talent, success, 
+achievement, reputation. While those are good things to have in a mentor, it’s far better to have moral authority. That means being a person of character, conviction, and integrity—and sustaining that life over time. You don’t have the be the world’s greatest all-around human in order to have moral authority. You can distinguish yourself in any number of areas while still growing yourself in others.Day 14-16
+Questions for Group Discussion:
+Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
+If you could be known for one thing, what would you want it to be? What would it 
+take to get that level of respect? What value could you pass on as a mentor? Do you 
+know anyone who might want to learn from you? Who on your team has moral 
+authority with you? What makes you trust them in this way?
+---
 
-30-DAY GROWTH PLAN 12
-My area of choice where I will grow is:
+--- CHUNK 2 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking 
+forward to walking beside you o n your leadership journey. 
+You downloaded this guide because y ou know something a lot of peo ple with great potential 
+miss, every leader needs to embrac e per sonal growth in order to creat e growth in their 
+business, team, community, or wit h an ything outside of themsel eves .
+Everything you want out of life  will come through your willingn ess to grow. That’s because  you 
+can’t give what you don’t have , and you can’t lead where you don’t  go.
+Each section will be an exploratio n of a diﬀerent facet of growth,  complete with deep dives  into 
+pressing topics, reﬂection time, a nd growth-oriented work.
+The next 30 days will transform  your  approach to your daily lif e if you take this plan ser iously. 
+Be intentional and you’ll see inc redible results.
+This guide is designed for you  to take t his personal growth jo urney alone OR with a friend or 
+group. It’s up to you. There are reﬂect ion and discussion guides  throughout for both personal 
+and group study.
+Let’s dive right in with two key two ques tions you need to consider:
+• What keeps you from being authentic with others?
+• What barriers to authenticity (beliefs, fears, experiences, etc.) do you struggle against?
+Answering these questions lets you know if you’re being honest enough with yourself to take 
+this journey. It also tells you where your growth is going to be most important and most challenging through this process.
+Take some time to reﬂect and write out your answers. Then, if you’re feeling bold and really 
+want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment.
+Once you’ve taken that ﬁrst step, it’s time to dive in. Get ready, get set, grow.
+30-DAY GROWTH PLAN 1Developing Y our 30-Day Growth Plan
+---
+
+--- CHUNK 3 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Your plan is going to be personaliz ed and it’s 
+going to involve one ar
+ea of choice and one area 
+of skill. Just follow along with this PDF 
+worksheet and you’ll end these 30 days with 
+your own personalized growth plan, as you rely 
+on my teaching from The 15 Laws of Growth to 
+help spur your thinking. Let’s get started.Over the next 30 days, we’re going  to develop our growth 
+plans together along the following three axes—Assessment, 
+Ambition, 
+Advancement.
+These are better expressed in three questions:
+• Where am I?
+• Where am I going?• How will I get there?
+PASSION
+Early in my career, I met a mento r who provided me with a personal growth kit—an all-in-
+one guide to ﬁve areas of my life. I had never invested in myself in this way, and I soon 
+realized that growth is the only guarantee that tomorrow would be better than today. 
+So, it’s best to have a plan for strategic growth.
+Growth always comes in two areas: choice and skill. As I teach, a reas of choice are more 
+like soft-skills—attitude, belief, perspective, values, conﬁdence,  faith, and trust. Areas of 
+skill are more akin to hard-skills—writing, planning, strategy, coding, ﬁtness, diet, 
+professional development, etc.
+Your friend, 
+---
+
+--- CHUNK 4 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this 
+can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?• An Atlas mentality - where you carry all the burdens without help?• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and 
+weaknesses.
+BONUS:
+John’s podcast on identifying leadership blind spots oﬀers bonus insights into seeing yourself 
+realistically. Download the PDF notes and listen here: https://johnmaxwellleadershippodcast.com/episodes/leadership-blind-spots
+No one can produce great things who is not thoroughly sincere in dealing with him- or herself.”Day 4-6
+Questions for Group Discussion:
+What strengths and weaknesses did you discover in yourself?
+In thinking of your team’s strengths and weaknesses, what do you think your team would write?Questions for Journal Reﬂection:
+What strengths and weaknesses in yourself can you recognize? What are your team’s strengths 
+and weaknesses?
+---
+
+--- CHUNK 5 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 13The area of choice where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+The area of skill where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+A person I will ask to mentor/coach my team in my growth is:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 for my team is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+TEAM
+---
+
+--- CHUNK 6 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 10The Law of the Environment:
+Growth thrives in conducive surroundings.
+Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
+Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his 
+mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters. 
+Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky 
+and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.Day 24-26
+Questions for Group Discussion:
+Would you say you create a growth environment for your team? If so, what do you do 
+to create one? If not, what can you do to create one?Questions for Journal Reﬂection:
+Who do you know who helps you grow?
+What books in your areas of skill and choice do you need to read?
+What changes do you need to make in your routine to nourish and refresh yourself?
+---
+
+--- CHUNK 7 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 6The Law of Curiosity:
+Growth is driven by wanting to learn more. 
+Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet.
+Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. 
+Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. 
+Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your 
+history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
+BONUS:
+Writer and scientist Carol S. Dweck in her book Mindset: The New Psychology of Success writes that 
+ﬁxed mindsets believe a person’s qualities are set traits and not capable of being changed. Growth mindsets believe learning and intelligence can grow with time and experience. Explore which mindset you embrace and think through your culture, upbringing, and experiences brought you to that mindset.Day 11-13
+Questions for Group Discussion:
+Which kind of person are you: the one who asks Why or the one who asks Why Not? Give 
+context to your answer
+ What kinds of things do you do to fuel your curiosity or feed your interests?Questions for Journal Reﬂection:
+What are you curious about? Have you done much to investigate those subjects?
+Why or why not? Who on your team is naturally curious? How can you tell? What can you 
+learn from them?
+---
+
+--- CHUNK 8 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 3The Law of Intentionality:
+Watch and take notes on the video “The Law of Intentionality” then come back to your worksheet.
+As John said in the video, growth is not automatic. 
+Nature suggests that growth just happens. 
+But that’s not the truth. 
+Change is automatic. 
+Change happens whether you like it or not, but growth is guided change. 
+Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst 
+invest in yourself because you can’t give what you don’t have.
+Growth is the only 
+guarantee that 
+tomorrow is going 
+to get better.”Day 1-3
+Questions for Journal Reﬂection:
+How many choices in your day are intentional? Of those, how many are choices 
+in the moment and how many are the result of a strategy?
+Questions for Group Discussion:
+In your opinion, why do people get change and growth confused?
+Of the choices you make with your team, how many are made in the moment and 
+how many are based on strategy?
+---
+
+--- CHUNK 9 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 9The Law of the Consistency:
+Motivation gets you going, but discipline keeps you growing.
+Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
+Consistency sounds boring. But as John talked about in the Law of Expansion, routine only becomes 
+boring when it’s measured against a ﬁnish line. When we understand that daily habits compound into excellence, it reframes our way of thinking. 
+One of John’s most helpful strategies in this area is the Rule of 5. For example, John doesn’t crank out 
+more than 100 books by just writing when he feels like it. Every day he does ﬁve things to stay consistent in his writing: reads, thinks, writes, ﬁles, and asks questions. Consistency is achieved when we can develop the necessary habits that will point us towards success, and habits are developed best when they are strategic and simple. A daily Rule of 5 for yourself and your team are essential for growth.Day 21-23
+Questions for Group Discussion:
+In what areas does your team struggle the most with consistency or do best with 
+being consistent? As a leader, why do you think they struggle in one area and 
+succeed in the other?Questions for Journal Reﬂection:
+In what areas of your life are you most consistent or inconsistent? Why?
+---
+
+--- CHUNK 10 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 12My area of choice where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 My area of skill where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 A person I will ask to mentor/coach me in my growth is:
 ____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of choice:
+____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+Personal
+---
 
-30-DAY GROWTH PLAN 9The Law of the Consistency:
-Motivation gets you going, but discipline keeps you growing.
-Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
-
-Day 14-16
+--- CHUNK 11 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 5The Law of the Mirror:
+How we see ourselves determines how we invest in ourselves.
+Watch and take notes on the video “The Law of the Mirror” then co me back to your worksheet.
+How do you see yourself? John often ta lks about our lives as  a story—we’re living out a st ory for others 
+to read. If you don’t see yourself as  the hero of your own st ory, you  don’t have a high-enough 
+self-image. You determine what  cou rse your life will take. Yo u decide what dreams you will ch ase, wh at 
+impact you will make, and what  legacy you will leave. 
+The Law of Mirror is the perfect time a ccept and embrace the tr uth that you are worthy of 
+investment, and that your leader ship lives or dies on the inve stment s you make in yourself. In  the 
+video, John said, “You have to bet on yo urself ﬁrst.” This is where we all must decide whether we’re 
+willing to make that bet. Are y ou all-in?Day 7-10
 Questions for Group Discussion:
-Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
-If you could be known for one thing, what would you want it to be? What would it
-take to get that level of respect? What value could you pass on as a mentor? Do you
-know anyone who might want to learn from you? Who on your team has moral
-authority with you? What makes you trust them in this way?
+How is your self-image on a scale of 1-10?
+How is your self-investment on a scale of 1-10?
+What’s the diﬀerence between your self-image and your self-investment?Questions for Journal Reﬂection:
+What changes do you need to make to become the hero of your own story? What 
+would the outcome be for your team? When was the last time you bet big on yourself 
+and what were the results?
+---
 
-Questions for Group Discussion: In your opinion, why do people get change and growth confused? Of the choices you make with your team, how many are made in the moment and how many are based on strategy?
+--- CHUNK 12 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 11The Law of the Design:
+To maximize growth, develop strategies.
+Watch and take notes on the video “The Law of Design” then come back to your worksheet.
+We’ve ﬁnally arrived at the Law of Design, which is all about the strategies we develop to help us achieve 
+our personal growth. The ﬁnal step in developing your personal growth plan will be ﬁlling out the two Growth Plan Outlines that we’ve provided—one for you and one if you’re doing this exercise with a team.
+But the real work begins after today. You have to execute on the plan you’ve developed, otherwise all of 
+this work will be for nothing. This is where you have to determine again that you will pay the price to grow.
+We’re in this together. As you’re ﬁlling out these sheets, share them with a friend or mentor, 
+communicate your observations about your plan, and ask them where they see room to reﬁne it. John says that the key to making any growth plan stick is making it public, and after 30 days, you’ll not only have a solid plan, but a community of support along the way.Day 27-30
+---
 
-Day 21-23
+--- CHUNK 13 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 8The Law of the Expansion:
+Growth always increases your capacity.
+Watch and take notes on the video “The Law of Expansion” then come back to your worksheet.
+Several years ago, Nike released one of their most famous commercials. Simple and sparse, the 
+commercial features nothing but a runner, images of famous athletes projected onto buildings as the runner passes by, a haunting piano score, and Nike’s most famous (at the time) tagline: “There is no ﬁnish line.”
+As John discussed in the video clip, ﬁnish line mentality takes a short-term view on the process of 
+growth; people with a ﬁnish line mentality want to grow right now.
+Great leaders embrace a journey mentality. They understand that the process is the product—that what 
+you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become.Day 17-20
 Questions for Group Discussion:
-In what areas does your team struggle the most with consistency or do best with being consistent? As a leader, why do you think they struggle in one area and succeed in the other?
+Where is one place you’ve developed a ﬁnish line mentality with your team?
+Why do you think that is, and what can you do to inspire fresh growth?Questions for Journal Reﬂection:
+Where have you developed a ﬁnish line mentality and need to shake things up? 
+What is your biggest life dream?
+How will you know when you’re achieved that dream?
+---
 
-Take some time to reflect and write out your answers. Then, if you’re feeling bold and really want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment. Once you’ve taken that first step, it’s time to dive in. Get ready, get set, grow. 30-DAY GROWTH PLAN 1Developing Your 30-Day Growth Plan
+--- CHUNK 14 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: JOHN C. MAXWELLDiscover where you are. Determine where you are going. 
+Plan how you’ll get there.
+---
 
-Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking forward to walking beside you o n your leadership journey. You downloaded this guide because you know something a lot of people with great potential miss, every leader needs to embrace per sonal growth in order to create growth in their business, team, community, or anything outside of themselves. Everything you want out of life  will come through your willingness to grow. That’s because  you can’t give what you don’t have , and you can’t lead where you don’t go. Each section will be an exploration of a different facet of growth, complete with deep dives into pressing topics, reflection time, and growth-oriented work. The next 30 days will transform your approach to your daily life if you take this plan seriously. Be intentional and you'll see incredible results.
 
-2025-05-12 12:39:30,149 [INFO] --- End Message ---
-2025-05-12 12:39:30,149 [INFO] 
+2025-05-12 13:58:28,053 [INFO] --- End Message ---
+2025-05-12 13:58:28,053 [INFO] 
 --- Message 3 ---
-2025-05-12 12:39:30,149 [INFO] Role: user
-2025-05-12 12:39:30,149 [INFO] Content:
+2025-05-12 13:58:28,053 [INFO] Role: user
+2025-05-12 13:58:28,053 [INFO] Content:
 We want to develop a lesson plan on 'Fearless Presenter' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
-2025-05-12 12:39:30,149 [INFO] --- End Message ---
-2025-05-12 12:39:30,149 [INFO] 
+2025-05-12 13:58:28,053 [INFO] --- End Message ---
+2025-05-12 13:58:28,053 [INFO] 
 --- Message 4 ---
-2025-05-12 12:39:30,149 [INFO] Role: assistant
-2025-05-12 12:39:30,149 [INFO] Content:
+2025-05-12 13:58:28,053 [INFO] Role: assistant
+2025-05-12 13:58:28,053 [INFO] Content:
 
 {
   "competency": "Fearless Presenter",
@@ -421,17 +1153,17 @@ We want to develop a lesson plan on 'Fearless Presenter' for our WCE students. P
 }
 
 
-2025-05-12 12:39:30,149 [INFO] --- End Message ---
-2025-05-12 12:39:30,150 [INFO] 
+2025-05-12 13:58:28,053 [INFO] --- End Message ---
+2025-05-12 13:58:28,053 [INFO] 
 --- Message 5 ---
-2025-05-12 12:39:30,150 [INFO] Role: user
-2025-05-12 12:39:30,150 [INFO] Content:
+2025-05-12 13:58:28,053 [INFO] Role: user
+2025-05-12 13:58:28,053 [INFO] Content:
 We want to develop a lesson plan on 'CEO Perspective' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value.
-2025-05-12 12:39:30,150 [INFO] --- End Message ---
-2025-05-12 12:39:30,150 [INFO] 
+2025-05-12 13:58:28,053 [INFO] --- End Message ---
+2025-05-12 13:58:28,053 [INFO] 
 --- Message 6 ---
-2025-05-12 12:39:30,150 [INFO] Role: assistant
-2025-05-12 12:39:30,150 [INFO] Content:
+2025-05-12 13:58:28,053 [INFO] Role: assistant
+2025-05-12 13:58:28,053 [INFO] Content:
 
 
 {
@@ -468,93 +1200,304 @@ We want to develop a lesson plan on 'CEO Perspective' for our WCE students. Plea
 }
      
 
-2025-05-12 12:39:30,150 [INFO] --- End Message ---
-2025-05-12 12:39:30,150 [INFO] 
+2025-05-12 13:58:28,053 [INFO] --- End Message ---
+2025-05-12 13:58:28,053 [INFO] 
 --- Message 7 ---
-2025-05-12 12:39:30,150 [INFO] Role: user
-2025-05-12 12:39:30,150 [INFO] Content:
+2025-05-12 13:58:28,053 [INFO] Role: user
+2025-05-12 13:58:28,053 [INFO] Content:
 Context:
-Your plan is going to be personaliz ed and it’s going to involve one ar ea of choice and one area of skill. ... Over the next 30 days, we’re going  to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement.
 
-The Law of Curiosity: Growth is driven by wanting to learn more. ... Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. ... Curiosity is the precursor to action.
-
-My team will read the following book to grow in our area of choice:
-____________________________________________________________________________________________________________________________________________________
-My team will read the following book to grow in our area of skill:
-____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. As I teach, areas of choice are more like soft-skills—attitude, belief, perspective, values, confidence, faith, and trust. Areas of skill are more akin to hard-skills—writing, planning, strategy, coding, fitness, diet, professional development, etc.
-
-30-DAY GROWTH PLAN 4The Law of Awareness:
-Y ou must know yourself to grow yourself.
-Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
-The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
-• Rose-colored glasses - always seeing potential and not problems?
-• The glass half-empty - with a pessimistic attitude?
-• An Atlas mentality - where you carry all the burdens without help?
-• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
-It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-The Law of Awareness: Y ou must know yourself to grow yourself. ... It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and weaknesses.
-
-30-DAY GROWTH PLAN
-The area of choice where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-The area of skill where I will lead my team to grow is:
-____________________________________________________________________________________________________________________________________________________
-
-Growth always comes in two areas: choice and skill. ... Your friend, 30-DAY GROWTH PLAN 3The Law of Intentionality: Watch and take notes on the video ... Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst invest in yourself because you can’t give what you don’t have.
-
-Great leaders embrace a journey mentality. They understand that the process is the product—that what you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become. Day 17-20 Questions for Group Discussion: Where is one place you’ve developed a ﬁnish line mentality with your team? Why do you think that is, and what can you do to inspire fresh growth?
-
-Your plan is going to be personalized and it’s going to involve one area of choice and one area of skill. Just follow along with this PDF worksheet and you’ll end these 30 days with your own personalized growth plan, as you rely on my teaching from The 15 Laws of Growth to help spur your thinking. Let’s get started. Over the next 30 days, we’re going to develop our growth plans together along the following three axes—Assessment, Ambition, Advancement. These are better expressed in three questions: • Where am I? • Where am I going?• How will I get there?
-
-30-DAY GROWTH PLAN 6The Law of Curiosity: Growth is driven by wanting to learn more. Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet. Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
-
-30-DAY GROWTH PLAN 10The Law of the Environment:
-Growth thrives in conducive surroundings.
-Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
-Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters.
-Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.
-
-30-DAY GROWTH PLAN 7The Law of the Modeling:
+--- CHUNK 1 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 7The Law of the Modeling:
 It’s hard to improve when you have no one else but yourself to follow.
 Watch and take notes on the video “The Law of Modeling” then come back to your worksheet.
 It’s easier to grow when you have an example to follow. But as a leader, the bigger question isn’t whose 
 example will you follow; it’s what kind of example will you set? Even if you haven’t found a mentor, it doesn’t mean you can’t be a mentor. In fact, one of the best ways to really understand what to look for in a mentor is to become one yourself.
+Chances are you might start your wish list of mentoring qualities with things like talent, success, 
+achievement, reputation. While those are good things to have in a mentor, it’s far better to have moral authority. That means being a person of character, conviction, and integrity—and sustaining that life over time. You don’t have the be the world’s greatest all-around human in order to have moral authority. You can distinguish yourself in any number of areas while still growing yourself in others.Day 14-16
+Questions for Group Discussion:
+Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
+If you could be known for one thing, what would you want it to be? What would it 
+take to get that level of respect? What value could you pass on as a mentor? Do you 
+know anyone who might want to learn from you? Who on your team has moral 
+authority with you? What makes you trust them in this way?
+---
 
-30-DAY GROWTH PLAN 12
-My area of choice where I will grow is:
+--- CHUNK 2 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking 
+forward to walking beside you o n your leadership journey. 
+You downloaded this guide because y ou know something a lot of peo ple with great potential 
+miss, every leader needs to embrac e per sonal growth in order to creat e growth in their 
+business, team, community, or wit h an ything outside of themsel eves .
+Everything you want out of life  will come through your willingn ess to grow. That’s because  you 
+can’t give what you don’t have , and you can’t lead where you don’t  go.
+Each section will be an exploratio n of a diﬀerent facet of growth,  complete with deep dives  into 
+pressing topics, reﬂection time, a nd growth-oriented work.
+The next 30 days will transform  your  approach to your daily lif e if you take this plan ser iously. 
+Be intentional and you’ll see inc redible results.
+This guide is designed for you  to take t his personal growth jo urney alone OR with a friend or 
+group. It’s up to you. There are reﬂect ion and discussion guides  throughout for both personal 
+and group study.
+Let’s dive right in with two key two ques tions you need to consider:
+• What keeps you from being authentic with others?
+• What barriers to authenticity (beliefs, fears, experiences, etc.) do you struggle against?
+Answering these questions lets you know if you’re being honest enough with yourself to take 
+this journey. It also tells you where your growth is going to be most important and most challenging through this process.
+Take some time to reﬂect and write out your answers. Then, if you’re feeling bold and really 
+want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment.
+Once you’ve taken that ﬁrst step, it’s time to dive in. Get ready, get set, grow.
+30-DAY GROWTH PLAN 1Developing Y our 30-Day Growth Plan
+---
+
+--- CHUNK 3 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: Your plan is going to be personaliz ed and it’s 
+going to involve one ar
+ea of choice and one area 
+of skill. Just follow along with this PDF 
+worksheet and you’ll end these 30 days with 
+your own personalized growth plan, as you rely 
+on my teaching from The 15 Laws of Growth to 
+help spur your thinking. Let’s get started.Over the next 30 days, we’re going  to develop our growth 
+plans together along the following three axes—Assessment, 
+Ambition, 
+Advancement.
+These are better expressed in three questions:
+• Where am I?
+• Where am I going?• How will I get there?
+PASSION
+Early in my career, I met a mento r who provided me with a personal growth kit—an all-in-
+one guide to ﬁve areas of my life. I had never invested in myself in this way, and I soon 
+realized that growth is the only guarantee that tomorrow would be better than today. 
+So, it’s best to have a plan for strategic growth.
+Growth always comes in two areas: choice and skill. As I teach, a reas of choice are more 
+like soft-skills—attitude, belief, perspective, values, conﬁdence,  faith, and trust. Areas of 
+skill are more akin to hard-skills—writing, planning, strategy, coding, ﬁtness, diet, 
+professional development, etc.
+Your friend, 
+---
+
+--- CHUNK 4 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 4The Law of Awareness:
+Y ou must know yourself to grow yourself.
+Watch and take notes on the video “The Law of Awareness” then come back to your worksheet.
+The Law of Awareness tells us that in order to grow, we have to establish and face reality. As leaders, this 
+can be a challenge. We spend a lot of time assessing situations, and we often think we’re doing a great job assessing reality. But there are some tendencies we have that we need to honestly address. Do you walk around with:
+• Rose-colored glasses - always seeing potential and not problems?
+• The glass half-empty - with a pessimistic attitude?• An Atlas mentality - where you carry all the burdens without help?• A victim mentality - as if you’re powerless to eﬀect outcomes and create change?
+It’s time to take stock of ourselves and our team, as we dig into the truth about our strengths and 
+weaknesses.
+BONUS:
+John’s podcast on identifying leadership blind spots oﬀers bonus insights into seeing yourself 
+realistically. Download the PDF notes and listen here: https://johnmaxwellleadershippodcast.com/episodes/leadership-blind-spots
+No one can produce great things who is not thoroughly sincere in dealing with him- or herself.”Day 4-6
+Questions for Group Discussion:
+What strengths and weaknesses did you discover in yourself?
+In thinking of your team’s strengths and weaknesses, what do you think your team would write?Questions for Journal Reﬂection:
+What strengths and weaknesses in yourself can you recognize? What are your team’s strengths 
+and weaknesses?
+---
+
+--- CHUNK 5 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 13The area of choice where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+The area of skill where I will lead my team to grow is:
+____________________________________________________________________________________________________________________________________________________
+A person I will ask to mentor/coach my team in my growth is:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of choice:
+____________________________________________________________________________________________________________________________________________________
+My team will read the following book to grow in our area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 for my team is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+TEAM
+---
+
+--- CHUNK 6 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 10The Law of the Environment:
+Growth thrives in conducive surroundings.
+Watch and take notes on the video “The Law of Environment” then come back to your worksheet.
+Growth is signiﬁcantly diminished in unhealthy environments. In the video, John quotes the advice of his 
+mentor and friend, Elmer Towns, who told John to spend time with great people, read great books, visit great places, attend great events, and nourish yourself. Sounds simple, but we often complicate matters. 
+Here’s the truth: If we don’t invest in ourselves ﬁrst, no one else is going to. We don’t want to be cranky 
+and bitter. We want to be the leader who brings life to the team, who comes with a healthy perspective, fresh eyes, a sense of wonder and amazement at what the world has to oﬀer. That means making time to create a growth environment that will help us be the best we can be.Day 24-26
+Questions for Group Discussion:
+Would you say you create a growth environment for your team? If so, what do you do 
+to create one? If not, what can you do to create one?Questions for Journal Reﬂection:
+Who do you know who helps you grow?
+What books in your areas of skill and choice do you need to read?
+What changes do you need to make in your routine to nourish and refresh yourself?
+---
+
+--- CHUNK 7 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 6The Law of Curiosity:
+Growth is driven by wanting to learn more. 
+Watch and take notes on the video “The Law of Curiosity” then come back to your worksheet.
+Curious leaders are humble, self-aware, realistic, open, and willing to have a discussion just to learn. 
+Fixed-minded leaders are the opposite of all of that. A ﬁxed-minded leader would rather not know, thank you very much, because knowing brings with it the burden of doing. 
+Curiosity is the precursor to action. Leadership means embracing a growth mindset. No matter your 
+history or background, it’s never too late to live a life of curiosity and growth. Your leadership journey will always have a next step as long as it’s fueled by curiosity.
+BONUS:
+Writer and scientist Carol S. Dweck in her book Mindset: The New Psychology of Success writes that 
+ﬁxed mindsets believe a person’s qualities are set traits and not capable of being changed. Growth mindsets believe learning and intelligence can grow with time and experience. Explore which mindset you embrace and think through your culture, upbringing, and experiences brought you to that mindset.Day 11-13
+Questions for Group Discussion:
+Which kind of person are you: the one who asks Why or the one who asks Why Not? Give 
+context to your answer
+ What kinds of things do you do to fuel your curiosity or feed your interests?Questions for Journal Reﬂection:
+What are you curious about? Have you done much to investigate those subjects?
+Why or why not? Who on your team is naturally curious? How can you tell? What can you 
+learn from them?
+---
+
+--- CHUNK 8 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 3The Law of Intentionality:
+Watch and take notes on the video “The Law of Intentionality” then come back to your worksheet.
+As John said in the video, growth is not automatic. 
+Nature suggests that growth just happens. 
+But that’s not the truth. 
+Change is automatic. 
+Change happens whether you like it or not, but growth is guided change. 
+Growth requires planning, strategy, and focused eﬀort. Growth is intentional. As a leader, you must ﬁrst 
+invest in yourself because you can’t give what you don’t have.
+Growth is the only 
+guarantee that 
+tomorrow is going 
+to get better.”Day 1-3
+Questions for Journal Reﬂection:
+How many choices in your day are intentional? Of those, how many are choices 
+in the moment and how many are the result of a strategy?
+Questions for Group Discussion:
+In your opinion, why do people get change and growth confused?
+Of the choices you make with your team, how many are made in the moment and 
+how many are based on strategy?
+---
+
+--- CHUNK 9 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 9The Law of the Consistency:
+Motivation gets you going, but discipline keeps you growing.
+Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
+Consistency sounds boring. But as John talked about in the Law of Expansion, routine only becomes 
+boring when it’s measured against a ﬁnish line. When we understand that daily habits compound into excellence, it reframes our way of thinking. 
+One of John’s most helpful strategies in this area is the Rule of 5. For example, John doesn’t crank out 
+more than 100 books by just writing when he feels like it. Every day he does ﬁve things to stay consistent in his writing: reads, thinks, writes, ﬁles, and asks questions. Consistency is achieved when we can develop the necessary habits that will point us towards success, and habits are developed best when they are strategic and simple. A daily Rule of 5 for yourself and your team are essential for growth.Day 21-23
+Questions for Group Discussion:
+In what areas does your team struggle the most with consistency or do best with 
+being consistent? As a leader, why do you think they struggle in one area and 
+succeed in the other?Questions for Journal Reﬂection:
+In what areas of your life are you most consistent or inconsistent? Why?
+---
+
+--- CHUNK 10 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 12My area of choice where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 My area of skill where I will grow is:
 ____________________________________________________________________________________________________________________________________________________
 A person I will ask to mentor/coach me in my growth is:
 ____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of choice:
+____________________________________________________________________________________________________________________________________________________
+I will read the following books to grow in my area of skill:
+____________________________________________________________________________________________________________________________________________________
+My Rule of 5 is:
+1._________________________________________________________________________________________________________________________________________________
+2.________________________________________________________________________________________________________________________________________________
+3.________________________________________________________________________________________________________________________________________________
+4.________________________________________________________________________________________________________________________________________________
+5.________________________________________________________________________________________________________________________________________________
+Personal
+---
 
-30-DAY GROWTH PLAN 9The Law of the Consistency:
-Motivation gets you going, but discipline keeps you growing.
-Watch and take notes on the video “The Law of Consistency” then come back to your worksheet.
-
-Day 14-16
+--- CHUNK 11 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 5The Law of the Mirror:
+How we see ourselves determines how we invest in ourselves.
+Watch and take notes on the video “The Law of the Mirror” then co me back to your worksheet.
+How do you see yourself? John often ta lks about our lives as  a story—we’re living out a st ory for others 
+to read. If you don’t see yourself as  the hero of your own st ory, you  don’t have a high-enough 
+self-image. You determine what  cou rse your life will take. Yo u decide what dreams you will ch ase, wh at 
+impact you will make, and what  legacy you will leave. 
+The Law of Mirror is the perfect time a ccept and embrace the tr uth that you are worthy of 
+investment, and that your leader ship lives or dies on the inve stment s you make in yourself. In  the 
+video, John said, “You have to bet on yo urself ﬁrst.” This is where we all must decide whether we’re 
+willing to make that bet. Are y ou all-in?Day 7-10
 Questions for Group Discussion:
-Where in your life do you want to develop moral authority? Why?Questions for Journal Reﬂection:
-If you could be known for one thing, what would you want it to be? What would it
-take to get that level of respect? What value could you pass on as a mentor? Do you
-know anyone who might want to learn from you? Who on your team has moral
-authority with you? What makes you trust them in this way?
+How is your self-image on a scale of 1-10?
+How is your self-investment on a scale of 1-10?
+What’s the diﬀerence between your self-image and your self-investment?Questions for Journal Reﬂection:
+What changes do you need to make to become the hero of your own story? What 
+would the outcome be for your team? When was the last time you bet big on yourself 
+and what were the results?
+---
 
-Questions for Group Discussion: In your opinion, why do people get change and growth confused? Of the choices you make with your team, how many are made in the moment and how many are based on strategy?
+--- CHUNK 12 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 11The Law of the Design:
+To maximize growth, develop strategies.
+Watch and take notes on the video “The Law of Design” then come back to your worksheet.
+We’ve ﬁnally arrived at the Law of Design, which is all about the strategies we develop to help us achieve 
+our personal growth. The ﬁnal step in developing your personal growth plan will be ﬁlling out the two Growth Plan Outlines that we’ve provided—one for you and one if you’re doing this exercise with a team.
+But the real work begins after today. You have to execute on the plan you’ve developed, otherwise all of 
+this work will be for nothing. This is where you have to determine again that you will pay the price to grow.
+We’re in this together. As you’re ﬁlling out these sheets, share them with a friend or mentor, 
+communicate your observations about your plan, and ask them where they see room to reﬁne it. John says that the key to making any growth plan stick is making it public, and after 30 days, you’ll not only have a solid plan, but a community of support along the way.Day 27-30
+---
 
-Day 21-23
+--- CHUNK 13 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: 30-DAY GROWTH PLAN 8The Law of the Expansion:
+Growth always increases your capacity.
+Watch and take notes on the video “The Law of Expansion” then come back to your worksheet.
+Several years ago, Nike released one of their most famous commercials. Simple and sparse, the 
+commercial features nothing but a runner, images of famous athletes projected onto buildings as the runner passes by, a haunting piano score, and Nike’s most famous (at the time) tagline: “There is no ﬁnish line.”
+As John discussed in the video clip, ﬁnish line mentality takes a short-term view on the process of 
+growth; people with a ﬁnish line mentality want to grow right now.
+Great leaders embrace a journey mentality. They understand that the process is the product—that what 
+you put into something shows up in the result. We have to lean out of our comfort zone and lean into the challenges that will stretch us towards the person and lead we want to become.Day 17-20
 Questions for Group Discussion:
-In what areas does your team struggle the most with consistency or do best with being consistent? As a leader, why do you think they struggle in one area and succeed in the other?
+Where is one place you’ve developed a ﬁnish line mentality with your team?
+Why do you think that is, and what can you do to inspire fresh growth?Questions for Journal Reﬂection:
+Where have you developed a ﬁnish line mentality and need to shake things up? 
+What is your biggest life dream?
+How will you know when you’re achieved that dream?
+---
 
-Take some time to reflect and write out your answers. Then, if you’re feeling bold and really want to ensure accountability, post it on social media or text your thoughts to a friend or mentor. Keep in mind, a shared commitment becomes a strong commitment. Once you’ve taken that first step, it’s time to dive in. Get ready, get set, grow. 30-DAY GROWTH PLAN 1Developing Your 30-Day Growth Plan
+--- CHUNK 14 ---
+Source: 30-Day_Growth_Plan_Again.pdf
+Tags: []
+Content: JOHN C. MAXWELLDiscover where you are. Determine where you are going. 
+Plan how you’ll get there.
+---
 
-Welcome to John C. Maxwell’s 30-Day  Growth Plan! We’re glad you’re he re, and we’re looking forward to walking beside you o n your leadership journey. You downloaded this guide because you know something a lot of people with great potential miss, every leader needs to embrace per sonal growth in order to create growth in their business, team, community, or anything outside of themselves. Everything you want out of life  will come through your willingness to grow. That’s because  you can’t give what you don’t have , and you can’t lead where you don’t go. Each section will be an exploration of a different facet of growth, complete with deep dives into pressing topics, reflection time, and growth-oriented work. The next 30 days will transform your approach to your daily life if you take this plan seriously. Be intentional and you'll see incredible results.
 
-Question: We want to develop a lesson plan on 'Seize Opportunities' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the ACTION core value.
-2025-05-12 12:39:30,150 [INFO] --- End Message ---
-2025-05-12 12:39:30,150 [INFO] 
+Question: We want to develop a lesson plan on 'Authenticity' for our WCE students. Please extract the relevant material and provide suggestions that align with this behavioral competency under the PURPOSE core value.
+2025-05-12 13:58:28,066 [INFO] --- End Message ---
+2025-05-12 13:58:28,067 [INFO] 
 === END MESSAGES ===
-2025-05-12 12:39:43,255 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 13:58:43,055 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
