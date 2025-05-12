@@ -61,6 +61,25 @@ async def upload_document(file: UploadFile = File(...)):
         # Process with OpenAI (chunking and tagging)
         chunks, tags = openai_service.process_document(extracted_content, filename, filetype=filetype)
         
+        # Ensure each chunk has its tags properly set
+        for i, chunk in enumerate(chunks):
+            if isinstance(chunk, dict):
+                # If the chunk doesn't already have tags field, add it
+                if 'tags' not in chunk:
+                    # If we have tags for this chunk in the global tags list, use them
+                    if tags and i < len(tags):
+                        chunk['tags'] = tags[i]
+                    else:
+                        chunk['tags'] = []
+            else:
+                # If chunks are simple strings, convert to dict with tags
+                chunk_obj = {"text": chunk}
+                if tags and i < len(tags):
+                    chunk_obj['tags'] = tags[i]
+                else:
+                    chunk_obj['tags'] = []
+                chunks[i] = chunk_obj  # Replace the string with the dict
+
         # Generate embeddings for each chunk
         chunk_objs = []
         for chunk in chunks:
@@ -69,10 +88,16 @@ async def upload_document(file: UploadFile = File(...)):
                 model="text-embedding-ada-002"
             )
             embedding = embedding_response.data[0].embedding
-            chunk_objs.append({"text": chunk["text"] if isinstance(chunk, dict) and "text" in chunk else chunk, "embedding": embedding})
+            chunk_obj = {
+                "text": chunk["text"] if isinstance(chunk, dict) and "text" in chunk else chunk,
+                "embedding": embedding,
+                "tags": chunk.get("tags", []) if isinstance(chunk, dict) else [],
+                "chunk_id": chunk.get("chunk_id", f"{filename}-chunk-{len(chunk_objs)}")
+            }
+            chunk_objs.append(chunk_obj)
         
         # Upsert to Pinecone
-        pinecone_service.upsert_chunks(filename, chunk_objs, tags)
+        pinecone_service.upsert_chunks(filename, chunk_objs)
         
         # Store in GCS
         gcs_path = storage_service.upload_file(content, filename)
@@ -123,7 +148,7 @@ async def query_content(request: Request):
         for i, match in enumerate(matches):
             metadata = match["metadata"]
             chunk_text = metadata.get("chunkText", "")
-            chunk_tags = json.loads(metadata.get("tags", "[]"))
+            chunk_tags = metadata.get("tags", [])  # Use tags directly as a list
             
             logging.info(f"CHUNK {i+1}:")
             logging.info(f"ID: {metadata.get('chunk_id', f'chunk-{i}')}")
@@ -140,7 +165,7 @@ async def query_content(request: Request):
             metadata = match["metadata"]
             context += f"\n--- CHUNK {i+1} ---\n"
             context += f"Source: {metadata.get('filename', 'unknown')}\n"
-            context += f"Tags: {metadata.get('tags', '[]')}\n" 
+            context += f"Tags: {metadata.get('tags', [])}\n" 
             context += f"Content: {metadata.get('chunkText', '')}\n"
             context += "---\n"
                 
