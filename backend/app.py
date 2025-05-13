@@ -36,7 +36,7 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://head-n-heart-gpt.vercel.app/"],  # Adjust in production
+    allow_origins=["*"],  # Adjust in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
