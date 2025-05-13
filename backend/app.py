@@ -165,6 +165,7 @@ async def query_content(request: Request):
             metadata = match["metadata"]
             context += f"\n--- CHUNK {i+1} ---\n"
             context += f"Source: {metadata.get('filename', 'unknown')}\n"
+            context += f"Chunk ID: {metadata.get('chunkId', 'unknown')}\n"
             context += f"Tags: {metadata.get('tags', [])}\n" 
             context += f"Content: {metadata.get('chunkText', '')}\n"
             context += "---\n"
@@ -328,11 +329,43 @@ Context:
         response_json = response.choices[0].message.content
         try:
             data = json.loads(response_json)
+            # Post-process: ensure 'content' in each extract is a direct quote from the context
+            for extract in data.get('extracts', []):
+                quote = extract.get('content', '')
+                found_in_context = False
+                # Check if the quote is a direct substring of any chunk in the context
+                for match in matches:
+                    chunk_text = match["metadata"].get("chunkText", "")
+                    if quote.strip() and quote.strip() in chunk_text:
+                        found_in_context = True
+                        break
+                if not found_in_context:
+                    # If not a direct quote, use GPT to extract a direct quote from the chunk
+                    # Find the most relevant chunk (by filename or other metadata if available)
+                    # For simplicity, use the first chunk
+                    chunk_text = matches[0]["metadata"].get("chunkText", "") if matches else ""
+                    quote_prompt = [
+                        {"role": "system", "content": "You are an expert at extracting direct quotes from educational content. Given a chunk of text and a question, extract the most relevant section (3-4 sentences) from the text that is most relevant to the topic in the question. Only return the exact quote, do not paraphrase or summarize and write out the full section. If no relevant quote exists, return an empty string."},
+                        {"role": "user", "content": f"Text: {chunk_text}\n\nQuestion: {query}"}
+                    ]
+                    quote_response = openai_service.client.chat.completions.create(
+                        model="gpt-4o",
+                        messages=quote_prompt
+                    )
+                    new_quote = quote_response.choices[0].message.content.strip().strip('"')
+                    if new_quote:
+                        extract['content'] = new_quote
             formatted = f"### Competency: {data.get('competency', '')}  \n**Category:** {data.get('category', '')}\n\n---\n\n#### Extracts\n"
+            teaching_suggestions = []
             for i, extract in enumerate(data.get('extracts', []), 1):
                 teaching_suggestion = extract.get('teaching_suggestion', '').replace('. ', '.\n   - ')
-                formatted += f"{i}. **Content:**  \n   {extract.get('content', '')}  \n   **Reference:**  \n   {extract.get('reference', '')}  \n   **Teaching Suggestion:**  \n   - {teaching_suggestion}\n\n"
+                teaching_suggestions.append(teaching_suggestion)
+                formatted += f"{i}. **Content:**  \n   {extract.get('content', '')}  \n   **Reference:**  \n   {extract.get('reference', '')}\n\n"
             formatted += "---\n\n#### Lesson Approach\n\n" + data.get('lesson_approach', '')
+            # Add all teaching suggestions at the end
+            formatted += "\n---\n\n#### Teaching Suggestions\n"
+            for i, suggestion in enumerate(teaching_suggestions, 1):
+                formatted += f"{i}. {suggestion}\n\n"
         except Exception:
             formatted = response_json  # fallback to raw if not JSON
         return {"reply": formatted}
