@@ -118,7 +118,7 @@ function QueryInterface() {
 
     setLoading(true);
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/query`, { query: query.trim() });
+      const response = await axios.post(`https://head-n-heart-gpt-production.up.railway.app/query`, { query: query.trim() });
       setResults(response.data);
     } catch (error) {
       console.error('Error querying content:', error);
