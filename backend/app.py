@@ -355,15 +355,15 @@ Context:
                     new_quote = quote_response.choices[0].message.content.strip().strip('"')
                     if new_quote:
                         extract['content'] = new_quote
-            formatted = f"### Competency: {data.get('competency', '')}  \n**Category:** {data.get('category', '')}\n\n---\n\n#### Extracts\n"
+            formatted = f"### Competency: {data.get('competency', '')}  \n**Category:** {data.get('category', '')}\n\n\n\n## Extracts\n\n"
             teaching_suggestions = []
             for i, extract in enumerate(data.get('extracts', []), 1):
                 teaching_suggestion = extract.get('teaching_suggestion', '').replace('. ', '.\n   - ')
                 teaching_suggestions.append(teaching_suggestion)
                 formatted += f"{i}. **Content:**  \n   {extract.get('content', '')}  \n   **Reference:**  \n   {extract.get('reference', '')}\n\n"
-            formatted += "---\n\n#### Lesson Approach\n\n" + data.get('lesson_approach', '')
+            formatted += "\n\n\n## Lesson Approach\n\n" + data.get('lesson_approach', '')
             # Add all teaching suggestions at the end
-            formatted += "\n---\n\n#### Teaching Suggestions\n"
+            formatted += "\n\n\n## Teaching Suggestions\n\n"
             for i, suggestion in enumerate(teaching_suggestions, 1):
                 formatted += f"{i}. {suggestion}\n\n"
         except Exception:
