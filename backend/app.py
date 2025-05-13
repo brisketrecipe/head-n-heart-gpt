@@ -133,22 +133,73 @@ async def query_content(request: Request):
             
         data = await request.json()
         query = data.get("query", "")
+
+        # First, analyze the query to determine relevant subcategories
+        category_analysis = openai_service.client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": """You are an expert at categorizing educational content queries.
+Analyze the user's query and determine which of these 16 subcategories it relates to:
+
+ACTION category:
+- Results
+- Execution
+- Fearless Presenter
+- Seize Opportunities
+
+RELATIONSHIPS category:
+- Connection
+- Leadership
+- Collaboration
+- Awareness
+
+DISCIPLINE category:
+- Planning
+- Constructive Thinking
+- Organize
+- Control
+
+PURPOSE category:
+- Authenticity
+- CEO Perspective
+- Vision
+- Growth Mindset
+
+Return ONLY a JSON array of the most relevant subcategories (maximum 3) that the query relates to.
+Example response: ["Leadership", "Vision", "Planning"]"""},
+                {"role": "user", "content": query}
+            ]
+        )
+        
+        relevant_categories = json.loads(category_analysis.choices[0].message.content)
+        
         # Generate embedding for query
         query_embedding_response = openai_service.client.embeddings.create(
             input=query,
             model="text-embedding-ada-002"
         )
         query_embedding = query_embedding_response.data[0].embedding
-        # Query Pinecone
+        
+        # Query Pinecone with category filter
         matches = pinecone_service.query(query_embedding, top_k=20)
-        # Gather context from top chunks
+        
+        # Filter matches to only include chunks with relevant categories
+        filtered_matches = []
+        for match in matches:
+            chunk_tags = match["metadata"].get("tags", [])
+            if any(tag in relevant_categories for tag in chunk_tags):
+                filtered_matches.append(match)
 
-        # ADD THIS: Log each chunk with its metadata
+        # If no matches after filtering, use original matches
+        if not filtered_matches:
+            filtered_matches = matches
+
+        # Log each chunk with its metadata
         logging.info("=== CHUNKS RETRIEVED FROM PINECONE ===")
-        for i, match in enumerate(matches):
+        for i, match in enumerate(filtered_matches):
             metadata = match["metadata"]
             chunk_text = metadata.get("chunkText", "")
-            chunk_tags = metadata.get("tags", [])  # Use tags directly as a list
+            chunk_tags = metadata.get("tags", [])
             
             logging.info(f"CHUNK {i+1}:")
             logging.info(f"ID: {metadata.get('chunk_id', f'chunk-{i}')}")
@@ -158,10 +209,9 @@ async def query_content(request: Request):
             logging.info("---")
         logging.info("=== END CHUNKS ===")
 
-        chunks = [match["metadata"]["chunkText"] for match in matches]
-        # context = "\n\n".join(chunks)
+        # Build context from filtered chunks
         context = ""
-        for i, match in enumerate(matches):
+        for i, match in enumerate(filtered_matches):
             metadata = match["metadata"]
             context += f"\n--- CHUNK {i+1} ---\n"
             context += f"Source: {metadata.get('filename', 'unknown')}\n"
@@ -169,18 +219,6 @@ async def query_content(request: Request):
             context += f"Tags: {metadata.get('tags', [])}\n" 
             context += f"Content: {metadata.get('chunkText', '')}\n"
             context += "---\n"
-                
-                # Log each chunk individually with metadata
-        logging.info("=== CHUNKS RETRIEVED FROM PINECONE ===")
-        for i, match in enumerate(matches):
-            logging.info(f"CHUNK {i+1}:")
-            logging.info(f"Text: {match['metadata']['chunkText']}")
-            # Log any other metadata available in the match
-            for key, value in match['metadata'].items():
-                if key != 'chunkText':
-                    logging.info(f"{key}: {value}")
-            logging.info("---")
-        logging.info("=== END CHUNKS ===")
 
         # Log the context and prompt
         logging.info("=== FULL CONTEXT BEING FED TO GPT ===")
@@ -334,7 +372,7 @@ Context:
                 quote = extract.get('content', '')
                 found_in_context = False
                 # Check if the quote is a direct substring of any chunk in the context
-                for match in matches:
+                for match in filtered_matches:
                     chunk_text = match["metadata"].get("chunkText", "")
                     if quote.strip() and quote.strip() in chunk_text:
                         found_in_context = True
@@ -343,7 +381,7 @@ Context:
                     # If not a direct quote, use GPT to extract a direct quote from the chunk
                     # Find the most relevant chunk (by filename or other metadata if available)
                     # For simplicity, use the first chunk
-                    chunk_text = matches[0]["metadata"].get("chunkText", "") if matches else ""
+                    chunk_text = filtered_matches[0]["metadata"].get("chunkText", "") if filtered_matches else ""
                     quote_prompt = [
                         {"role": "system", "content": "You are an expert at extracting direct quotes from educational content. Given a chunk of text and a question, extract the most relevant section (3-4 sentences) from the text that is most relevant to the topic in the question. Only return the exact quote, do not paraphrase or summarize and write out the full section. If no relevant quote exists, return an empty string."},
                         {"role": "user", "content": f"Text: {chunk_text}\n\nQuestion: {query}"}

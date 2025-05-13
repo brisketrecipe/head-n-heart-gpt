@@ -109,10 +109,23 @@ class PineconeService:
             return True
         return False
 
-    def query(self, query_embedding, top_k=5):
-        results = self.index.query(
-            vector=query_embedding,
-            top_k=top_k,
-            include_metadata=True
-        )
-        return results["matches"] 
+    def query(self, query_embedding, top_k=20, filter_categories=None):
+        """Query Pinecone index with optional category filtering"""
+        if filter_categories:
+            # Create a filter for categories
+            filter_dict = {
+                "tags": {"$in": filter_categories}
+            }
+            results = self.index.query(
+                vector=query_embedding,
+                top_k=top_k,
+                include_metadata=True,
+                filter=filter_dict
+            )
+        else:
+            results = self.index.query(
+                vector=query_embedding,
+                top_k=top_k,
+                include_metadata=True
+            )
+        return results.matches 
