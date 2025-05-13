@@ -12,5 +12,13 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
+  },
+  optimizeDeps: {
+    include: ['react-markdown']
+  },
+  build: {
+    commonjsOptions: {
+      include: [/react-markdown/, /node_modules/]
+    }
   }
 }); 
