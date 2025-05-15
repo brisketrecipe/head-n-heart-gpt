@@ -1,45 +1,16 @@
-# from google.cloud import storage
-# import os
-# from datetime import datetime
+import os
+import tempfile
 
-# class StorageService:
-#     def __init__(self, bucket_name):
-#         self.client = storage.Client()
-#         self.bucket = self.client.bucket(bucket_name)
-        
-#     def upload_file(self, file_content, filename):
-#         """Upload a file to Google Cloud Storage"""
-#         # Generate a unique path for the file
-#         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-#         path = f"uploads/{timestamp}_{filename}"
-        
-#         # Create a new blob and upload the file
-#         blob = self.bucket.blob(path)
-#         blob.upload_from_string(file_content)
-        
-#         return path
-        
-#     def get_file_url(self, path, expiration=3600):
-#         """Generate a signed URL for file access"""
-#         blob = self.bucket.blob(path)
-#         return blob.generate_signed_url(
-#             version="v4",
-#             expiration=expiration,
-#             method="GET"
-#         )
-        
-#     def delete_file(self, path):
-#         """Delete a file from storage"""
-#         blob = self.bucket.blob(path)
-#         blob.delete()
-        
-#     def list_files(self, prefix="uploads/"):
-#         """List all files in the bucket with the given prefix"""
-#         blobs = self.bucket.list_blobs(prefix=prefix)
-#         return [blob.name for blob in blobs] 
+# Railway secure service account injection
+if os.getenv("RAILWAY") == "true":
+    google_creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+    if google_creds_json:
+        fd, temp_path = tempfile.mkstemp()
+        with os.fdopen(fd, 'w') as tmp:
+            tmp.write(google_creds_json)
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = temp_path
 
 from google.cloud import storage
-import os
 import json
 from datetime import datetime
 from dotenv import load_dotenv
