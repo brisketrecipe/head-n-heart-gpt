@@ -133,7 +133,7 @@ function DocumentUpload() {
         const formData = new FormData();
         formData.append('file', file);
 
-        await axios.post('/api/upload', formData, {
+        await axios.post('https://head-n-heart-gpt-production.up.railway.app/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
